@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  h1{
+    @apply text-h1-fz;
+  }
+  h2{
+    @apply text-h2-fz;
+  }
+  h3{
+    @apply text-h3-fz;
+  }
+  h4{
+    @apply text-h4-fz;
+  }
+  h5{
+    @apply text-h5-fz;
+  }
+  p{
+    @apply text-p-fz;
+  }
+};
+
+
+@layer utilities{
+  .bg-img{
+    position: relative;
+  }
+  .bg-img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/body-background.jpg');
+    background-size: cover;
+    opacity: .4;
+  }
+};
