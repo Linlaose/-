@@ -27,7 +27,45 @@
   </head>
 
   <body class="bg-img">
-    <header class="container px-6 mx-auto header">這是 header</header>
+    <header class="container px-6 pt-4 mx-auto header">
+      <nav class="flex items-center justify-between">
+        <!-- nav -->
+        <div class="relative w-5 h-4 hamburger">
+          <!-- hamburger -->
+          <input
+            class="absolute top-0 left-0 w-5 opacity-0 cursor-pointer z-5"
+            type="checkbox"
+            name=""
+            id=""
+          />
+          <div class="flex flex-col justify-between h-15px hamburger-lines z-2">
+            <span class="w-full h-0.5 block bg-black line-1"></span>
+            <span class="w-full h-0.5 block bg-black line-2"></span>
+            <span class="w-full h-0.5 block bg-black line-3"></span>
+          </div>
+        </div>
+        <!-- hamburger end -->
+        <div class="logo">
+          <!-- logo -->
+          <a href="index.html">
+            <img
+              class="w-full h-10"
+              src="./assets/images/Logo.svg"
+              alt="JinAiJia-logo"
+            />
+          </a>
+        </div>
+        <!-- logo end -->
+        <div class="text-center members-icon">
+          <!-- members -->
+          <a href="#">
+            <i class="w-5 h-5 fa-solid fa-circle-user"></i>
+          </a>
+        </div>
+        <!-- members end -->
+      </nav>
+      <!-- nav end -->
+    </header>
 
     <main class="container px-6 mx-auto"><%- contents %></main>
 

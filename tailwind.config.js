@@ -34,7 +34,11 @@ module.exports = {
       colors: {
         'true-gray-500': '#737272',
         'true-gray-800': '#222222',
-      }
+      },
+      zIndex: {
+        '2': '2',
+        '5': '5',
+      },
     },
   },
   plugins: [

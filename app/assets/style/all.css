@@ -40,4 +40,31 @@
     background-size: cover;
     opacity: .4;
   }
+
+  /* hamburger */
+  .line-1{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .line-2{
+    transition: transform 0.2s ease-in-out;
+  }
+  .line-3{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line-1{
+    transform: rotate(45deg);
+  }
+  .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line-2{
+    transform: scaleY(0);
+  }
+  .hamburger input[type="checkbox"]:checked ~ .hamburger-lines .line-3{
+    transform: rotate(-45deg);
+  }
+  /* hamburger end */
+  .h-15px{
+    height: 15px;
+  }
 };
