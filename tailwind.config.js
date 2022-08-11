@@ -19,6 +19,15 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.6em',
+      widest: '.68em',
+    },
 
     extend: {
       fontSize: {
@@ -39,6 +48,12 @@ module.exports = {
         '2': '2',
         '5': '5',
       },
+      spacing: {
+        '480': '30rem',
+      }
+      // backgroundImage: {
+      //   'banner': "url('../../assets/images/banner-chicken.jpg')",
+      // } 需使用 scale 而不影響字體變化，所以需要另起 css 套用偽元素
     },
   },
   plugins: [

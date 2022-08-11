@@ -40,6 +40,25 @@
     background-size: cover;
     opacity: .4;
   }
+  .bg-banner{
+    position: relative;
+  }
+  .bg-banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 480px;
+    background-image: url('../images/banner-chicken.jpg');
+    background-size: cover;
+    background-position: center center;
+    transition: transform 10s;
+  }
+  .bg-banner:hover:before{
+    transform: scale(1.2);
+  }
 
   /* hamburger */
   .line-1{
