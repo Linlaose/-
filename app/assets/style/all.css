@@ -64,6 +64,21 @@
     transform: rotate(-45deg);
   }
   /* hamburger end */
+
+  /* toggle menu */
+  .menu-list{
+    width: 100%;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    transform: translate(-100%);
+    opacity: 0;
+    z-index: 10;
+    text-align: center;
+    transition: opacity .5s ease-in-out;
+  }
+  
+  /* toggle menu end */
   .h-15px{
     height: 15px;
   }
