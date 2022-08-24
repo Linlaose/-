@@ -572,6 +572,9 @@ select {
   outline: 1px solid ButtonText;
   outline: 1px auto -webkit-focus-ring-color;
 }
+  html {
+  scroll-behavior: smooth;
+}
   h1 {
   font-size: 48px;
   line-height: 72px;
@@ -706,6 +709,9 @@ select {
 }
 .top-0 {
   top: 0px;
+}
+.-top-20 {
+  top: -5rem;
 }
 .z-2 {
   z-index: 2;
@@ -1100,6 +1106,41 @@ select {
     position: unset;
   }
 /* 為了讓輪播按鈕可控制位置 */
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@-webkit-keyframes spinAround {
+
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spinAround {
+
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.hover\:animate-spinCustom:hover {
+  -webkit-animation: spinAround 1s ease-in-out backwards;
+          animation: spinAround 1s ease-in-out backwards;
+}
 .hover\:font-black:hover {
   font-weight: 900;
 }
@@ -1117,7 +1158,17 @@ select {
     display: none;
   }
 
+  .md\:h-36 {
+    height: 9rem;
+  }
+
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:justify-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 };
