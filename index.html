@@ -23,8 +23,12 @@
       src="https://kit.fontawesome.com/bf3cb62f9b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/style/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/style/toggle.css" />
+    <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
   <body class="bg-img">
@@ -100,13 +104,14 @@
   </div>
 </div>
 <main class="container px-6 mx-auto">
-  <div id="service-hours" class="flex items-center justify-end">
+  <div id="service-hours" class="flex items-center justify-end mt-2">
     <!-- service-hours -->
     <i class="text-2xl text-red-900 fa-solid fa-door-open"></i>
     <p class="pl-2 text-red-900">營業中</p>
   </div>
   <!-- service-hours end (要以 js 捕捉時間自動更改) -->
-  <section class="container">
+  <section class="container mt-14">
+    <!-- secret -->
     <h2 class="relative font-bold true-gray-800 title-bg-img">
       <span class="inline-block"
         >好<span class="inline-block title-line"></span
@@ -164,6 +169,132 @@
       </li>
     </ul>
   </section>
+  <!-- secret end -->
+  <section class="container mt-14">
+    <!-- favorite -->
+    <h2 class="relative font-bold true-gray-800 title-bg-img">
+      <span class="inline-block"
+        >大<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >家<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >都<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >愛<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block">吃</span>
+    </h2>
+    <!-- Swiper -->
+    <div class="relative swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swipe-img rounded-tr-3xl h-2/3">
+            <img
+              class="object-cover w-full h-full rounded-tr-3xl"
+              src="./assets/images/chicken-vertical.jpg"
+              alt="food"
+            />
+          </div>
+          <div class="card">
+            <div class="card-text">
+              <h4 class="pt-2 font-medium text-red-900">雞冠</h4>
+              <p class="pt-2 text-red-900">剛剛好的口感 抓住您的味蕾</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute left-0 flex justify-between w-full bottom-6 swipe-controll"
+      >
+        <i
+          class="block text-5xl swiper-button-prev fa-solid fa-square-caret-left text-true-gray-400 swipe-control-position-unset w-3/20"
+        ></i>
+        <div class="absolute swiper-pagination"></div>
+        <i
+          class="block text-5xl swiper-button-next fa-solid fa-square-caret-right text-true-gray-400 swipe-control-position-unset w-3/20"
+        ></i>
+      </div>
+    </div>
+  </section>
+  <!-- favorite end -->
 </main>
 
 
@@ -206,6 +337,7 @@
     </footer>
     <!-- footer end -->
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
