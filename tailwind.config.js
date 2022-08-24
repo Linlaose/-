@@ -30,6 +30,9 @@ module.exports = {
     },
 
     extend: {
+      width: {
+        '3/20': '15%',
+      },
       fontSize: {
         'h1-fz': ['48px', '72px'],
         'h2-fz': ['40px', '60px'],
@@ -41,9 +44,21 @@ module.exports = {
         'p-xs-fz': ['16px', '19px'], /* Nav 的字體 */
       },
       colors: {
+        'true-gray-400': '#959493',
         'true-gray-500': '#737272',
         'true-gray-700': '#404040',
         'true-gray-800': '#222222',
+      },
+      borderRadius: {
+        'none': '0',
+        'sm': '0.125rem',
+        DEFAULT: '0.25rem',
+        'md': '0.375rem',
+        'lg': '0.5rem',
+        'xl': '0.75rem',
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+        'full': '9999px',
       },
       zIndex: {
         '2': '2',

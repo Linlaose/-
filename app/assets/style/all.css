@@ -118,4 +118,22 @@
     background-size: cover;
     content: "";
   }
+  .swiper{
+    height: 480px;
+  }
+  .swiper-button-prev::after{
+    content: " ";
+  } /* 消除預設按鈕 */
+  .swiper-button-next::after{
+    content: " ";
+  } /* 消除預設按鈕 */
+  .swipe-control-position-unset{
+    position: unset;
+  } /* 為了讓輪播按鈕可控制位置 */
+  .swiper-pagination-bullet{
+    background-color: #EFE9DD;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #959493;
+  }
 };
