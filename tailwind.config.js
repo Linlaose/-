@@ -71,6 +71,15 @@ module.exports = {
       // backgroundImage: {
       //   'banner': "url('../../assets/images/banner-chicken.jpg')",
       // } 需使用 scale 而不影響字體變化，所以需要另起 css 套用偽元素
+      keyframes: {
+        spinAround: {
+          '0%': { transform: 'rotate(0)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+      animation: {
+        spinCustom: 'spinAround 1s ease-in-out backwards',
+      },
     },
   },
   plugins: [

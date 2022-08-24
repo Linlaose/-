@@ -27,16 +27,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="./assets/style/animate.css" />
     <link rel="stylesheet" href="./assets/style/toggle.css" />
     <link rel="stylesheet" href="./assets/style/all.css" />
   </head>
 
   <body class="bg-img">
-    <header class="pt-4 header">
+    <header class="relative pt-4 pb-5 header">
       <!-- header -->
-      <nav class="container flex items-center justify-between px-6 mx-auto">
+      <nav
+        class="container flex items-center justify-between px-6 mx-auto md:justify-center"
+      >
         <!-- nav -->
-        <div class="relative w-5 h-4 hamburger">
+        <div class="relative w-5 h-4 hamburger md:hidden">
           <!-- hamburger -->
           <input
             class="absolute top-0 left-0 w-5 opacity-0 cursor-pointer z-5"
@@ -55,14 +58,30 @@
           <!-- logo -->
           <a href="index.html">
             <img
-              class="w-full h-20"
+              class="w-full h-20 md:h-36 hover:animate-spinCustom"
               src="./assets/images/Logo.svg"
               alt="JinAiJia-logo"
             />
           </a>
+          <div class="relative -top-20 logo-left">
+            <div class="absolute features features-animate">
+              <a class="hover:scale-105" href="#secret">本店特色</a>
+            </div>
+            <div class="absolute safety safety-animate">
+              <a class="hover:scale-105" href="#safety">吃得安心</a>
+            </div>
+          </div>
+          <div class="relative -top-20 logo-right">
+            <div class="absolute offers offers-animate">
+              <a class="hover:scale-105" href="./menu.html">餐點訂購</a>
+            </div>
+            <div class="absolute about about-animate">
+              <a class="hover:scale-105" href="#about-us">關於我們</a>
+            </div>
+          </div>
         </div>
         <!-- logo end -->
-        <div class="text-center members-icon">
+        <div class="text-center members-icon md:hidden">
           <!-- members -->
           <a class="block hover:text-red-900" href="#">
             <i class="leading-none text-h2-fz fa-solid fa-circle-user"></i>
