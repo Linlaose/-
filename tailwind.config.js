@@ -24,6 +24,7 @@ module.exports = {
       tighter: '-.05em',
       tight: '-.025em',
       normal: '0',
+      smallerWide: '.1em',
       wide: '.025em',
       wider: '.6em',
       widest: '.68em',
@@ -66,7 +67,7 @@ module.exports = {
       },
       spacing: {
         '480': '30rem',
-      }
+      },
       // backgroundImage: {
       //   'banner': "url('../../assets/images/banner-chicken.jpg')",
       // } 需使用 scale 而不影響字體變化，所以需要另起 css 套用偽元素
