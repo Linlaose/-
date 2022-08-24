@@ -95,6 +95,7 @@
 
     
 <div class="overflow-hidden">
+  <!-- banner -->
   <div class="bg-center bg-cover banner bg-banner h-480">
     <h2
       class="absolute w-full ml-6 tracking-wider text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -103,6 +104,7 @@
     </h2>
   </div>
 </div>
+<!-- banner end -->
 <main class="container px-6 mx-auto">
   <div id="service-hours" class="flex items-center justify-end mt-2">
     <!-- service-hours -->
@@ -188,7 +190,7 @@
       <span class="inline-block">吃</span>
     </h2>
     <!-- Swiper -->
-    <div class="relative swiper mySwiper">
+    <div class="relative mt-4 swiper foods-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="swipe-img rounded-tr-3xl h-2/3">
@@ -285,16 +287,111 @@
         class="absolute left-0 flex justify-between w-full bottom-6 swipe-controll"
       >
         <i
-          class="block text-5xl swiper-button-prev fa-solid fa-square-caret-left text-true-gray-400 swipe-control-position-unset w-3/20"
+          class="block text-5xl text-red-900 swiper-button-prev fa-solid fa-square-caret-left swipe-control-position-unset w-3/20"
         ></i>
-        <div class="absolute swiper-pagination"></div>
+        <div class="absolute left-0 text-center foods-swiper-pagination"></div>
         <i
-          class="block text-5xl swiper-button-next fa-solid fa-square-caret-right text-true-gray-400 swipe-control-position-unset w-3/20"
+          class="block text-5xl text-red-900 swiper-button-next fa-solid fa-square-caret-right swipe-control-position-unset w-3/20"
         ></i>
       </div>
     </div>
   </section>
   <!-- favorite end -->
+  <section class="container mt-8">
+    <!-- certificate -->
+    <h2 class="relative font-bold true-gray-800 title-bg-img">
+      <span class="inline-block"
+        >吃<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >得<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >安<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block">心</span>
+    </h2>
+    <div class="relative swipe-box w-80 md:w-full h-3/4">
+      <div class="relative h-full mt-4 swiper certificate-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swipe-img rounded-tr-3xl h-2/3">
+              <img
+                class="object-cover w-full h-full shadow-md rounded-tr-3xl"
+                src="./assets/images/certificate-1.PNG"
+                alt="certificate"
+              />
+            </div>
+            <div class="card">
+              <div class="card-text">
+                <h4 class="pt-2 font-medium text-center text-red-900">
+                  HCCP 食安證書
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swipe-img rounded-tr-3xl h-2/3">
+              <img
+                class="object-cover w-full h-full shadow-md rounded-tr-3xl"
+                src="./assets/images/certificate-1.PNG"
+                alt="certificate"
+              />
+            </div>
+            <div class="card">
+              <div class="card-text">
+                <h4 class="pt-2 font-medium text-center text-red-900">
+                  HCCP 食安證書
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute right-0 top-1/3 swipe-controll z-2">
+        <!-- <i
+          class="block text-5xl text-red-900 swiper-button-prev fa-solid fa-square-caret-left swipe-control-position-unset w-3/20"
+        ></i> -->
+        <!-- <div class="absolute text-center certificate-swiper-pagination"></div> -->
+        <i
+          class="block text-5xl text-red-900 certificate-swiper-button-next fa-solid fa-circle-right swipe-control-position-unset md:hidden"
+        ></i>
+      </div>
+    </div>
+  </section>
+  <!-- certificate end -->
+  <section class="container mt-8">
+    <!-- about us -->
+    <h2 class="relative font-bold true-gray-800 title-bg-img">
+      <span class="inline-block"
+        >關<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >於<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block"
+        >我<span class="inline-block title-line"></span
+      ></span>
+      <span class="inline-block">們</span>
+    </h2>
+    <p class="mt-4 tracking-smallerWide">
+      我們秉持著愛吃鹽水雞的精神,吃遍鹽水雞商家的同時也愛自己記錄各商家的優點積成本店的集合,透過對料理的堅持以及好奇,期望能夠做出獨一無二的鹽水雞小吃店,又整於探索商家的過程中不乏品嘗到昂贵的鹽水雞,我們透過好的通路取得好雞肉的同時希望降低成本,最後呈現平民的價格、貴族的品質給所有顧客。
+    </p>
+  </section>
+  <!-- about us end -->
+  <section class="pt-4 mt-8 locate">
+    <!-- google map -->
+    <iframe
+      class="w-full mb-16"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1094.5581470492273!2d120.29377137499405!3d22.66720390878929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e057f32a9747f%3A0x8dce1182deeb9971!2z6YeR6Im-55Sy6bm95rC06ZueL-mbtuWYtOWwj-iIlg!5e0!3m2!1sen!2stw!4v1661345950325!5m2!1sen!2stw"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+  <!-- google map -->
 </main>
 
 

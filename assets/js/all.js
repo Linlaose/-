@@ -11,14 +11,14 @@ if (logo) {
   });
 }
 
-; // swiper
+; // foods-swiper
 
-var swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.foods-swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
+  speed: 1000,
+  autoplay: true,
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -33,12 +33,44 @@ var swiper = new Swiper('.swiper', {
   },
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination'
+    el: '.foods-swiper-pagination'
   },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar'
+  }
+}); // certificate-swiper
+
+var certificateSwiper = new Swiper('.certificate-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  speed: 1000,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    360: {
+      slidesPerView: 1,
+      loop: true
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      loop: false
+    }
+  },
+  // If we need pagination
+  pagination: {
+    el: '.certificate-swiper-pagination'
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.certificate-swiper-button-next',
+    prevEl: '.certificate-swiper-button-prev'
   },
   // And if we need scrollbar
   scrollbar: {
