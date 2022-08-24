@@ -2,8 +2,8 @@ module.exports = {
   content: ["./app/**/*.{html,ejs}"],
   theme: {
     screens: {
-      'xs': '375px',
-      // => @media (min-width: 375px) { ... }
+      'xs': '360px',
+      // => @media (min-width: 360px) { ... }
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -42,6 +42,7 @@ module.exports = {
       },
       colors: {
         'true-gray-500': '#737272',
+        'true-gray-700': '#404040',
         'true-gray-800': '#222222',
       },
       zIndex: {
