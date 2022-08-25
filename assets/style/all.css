@@ -665,10 +665,10 @@ select {
     max-width: 768px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
 
   .container {
-    max-width: 1024px;
+    max-width: 992px;
   }
 }
 @media (min-width: 1280px) {
@@ -771,6 +771,9 @@ select {
 }
 .contents {
   display: contents;
+}
+.hidden {
+  display: none;
 }
 .h-480 {
   height: 30rem;
@@ -1113,34 +1116,6 @@ select {
       -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-@-webkit-keyframes spinAround {
-
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes spinAround {
-
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-.hover\:animate-spinCustom:hover {
-  -webkit-animation: spinAround 1s ease-in-out backwards;
-          animation: spinAround 1s ease-in-out backwards;
-}
 .hover\:font-black:hover {
   font-weight: 900;
 }
@@ -1153,6 +1128,10 @@ select {
           text-decoration-line: underline;
 }
 @media (min-width: 768px) {
+
+  .md\:block {
+    display: block;
+  }
 
   .md\:hidden {
     display: none;
@@ -1170,5 +1149,36 @@ select {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  @-webkit-keyframes spinAround {
+
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinAround {
+
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+  .md\:hover\:animate-spinCustom:hover {
+    -webkit-animation: spinAround 1s ease-in-out backwards;
+            animation: spinAround 1s ease-in-out backwards;
   }
 };
