@@ -24,7 +24,7 @@ const swiper = new Swiper('.foods-swiper', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 20
+      spaceBetween: 126
     }
   },
 

@@ -44,6 +44,9 @@ module.exports = {
         'p-sm-fz': ['16px', '22px'], /* 關於我們跟 copyright 的字體 */
         'p-xs-fz': ['16px', '19px'], /* Nav 的字體 */
       },
+      lineHeight: {
+        'tighter': '1.2',
+      },
       colors: {
         'true-gray-400': '#959493',
         'true-gray-500': '#737272',
