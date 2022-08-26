@@ -769,6 +769,9 @@ select {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.grid {
+  display: grid;
+}
 .contents {
   display: contents;
 }
@@ -777,6 +780,12 @@ select {
 }
 .h-480 {
   height: 30rem;
+}
+.h-0\.5 {
+  height: 0.125rem;
+}
+.h-0 {
+  height: 0px;
 }
 .h-2\/3 {
   height: 66.666667%;
@@ -789,12 +798,6 @@ select {
 }
 .h-4 {
   height: 1rem;
-}
-.h-0\.5 {
-  height: 0.125rem;
-}
-.h-0 {
-  height: 0px;
 }
 .h-20 {
   height: 5rem;
@@ -851,6 +854,9 @@ select {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.gap-6 {
+  gap: 1.5rem;
+}
 .gap-5 {
   gap: 1.25rem;
 }
@@ -865,6 +871,10 @@ select {
 }
 .border {
   border-width: 1px;
+}
+.bg-true-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 114 114 / var(--tw-bg-opacity));
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -985,6 +995,7 @@ select {
     height: 100%;
     background-image: url('../images/body-background.jpg');
     background-size: cover;
+    background-attachment: fixed;
     opacity: .4;
   }
 .bg-banner{
@@ -1109,6 +1120,9 @@ select {
     position: unset;
   }
 /* 為了讓輪播按鈕可控制位置 */
+.grid-auto-flow-dense{
+    grid-auto-flow: dense;
+  }
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1180,5 +1194,99 @@ select {
   .md\:hover\:animate-spinCustom:hover {
     -webkit-animation: spinAround 1s ease-in-out backwards;
             animation: spinAround 1s ease-in-out backwards;
+  }
+}
+@media (min-width: 992px) {
+
+  .lg\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .lg\:col-start-6 {
+    grid-column-start: 6;
+  }
+
+  .lg\:col-start-8 {
+    grid-column-start: 8;
+  }
+
+  .lg\:col-start-5 {
+    grid-column-start: 5;
+  }
+
+  .lg\:col-start-9 {
+    grid-column-start: 9;
+  }
+
+  .lg\:col-end-6 {
+    grid-column-end: 6;
+  }
+
+  .lg\:col-end-12 {
+    grid-column-end: 12;
+  }
+
+  .lg\:col-end-8 {
+    grid-column-end: 8;
+  }
+
+  .lg\:mt-11 {
+    margin-top: 2.75rem;
+  }
+
+  .lg\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:items-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .lg\:text-left {
+    text-align: left;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .lg\:leading-tighter {
+    line-height: 1.2;
   }
 };
