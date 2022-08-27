@@ -23,7 +23,7 @@ const swiper = new Swiper('.foods-swiper', {
       // spaceBetween: 20
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 24
     },
     992: {

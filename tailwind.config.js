@@ -71,7 +71,16 @@ module.exports = {
       spacing: {
         '7.5': '1.875rem', /* 30px */
         '480': '30rem',
+        '7/25': '28%',
         '2/5': '40%',
+        '11/25': '44%',
+        '3/5': '60%',
+        '61/100': '61%',
+        '22/25': '88%',
+        '23/25': '92%',
+      },
+      rotate: {
+        '250': '250deg',
       },
       // backgroundImage: {
       //   'banner': "url('../../assets/images/banner-chicken.jpg')",
