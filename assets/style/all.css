@@ -1101,6 +1101,14 @@ select {
     background-size: cover;
     content: "";
   }
+@media(min-width: 992px){
+    .title-bg-img::after{
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
 .foods-swiper{
     height: 480px;
   }
@@ -1214,6 +1222,14 @@ select {
     grid-column: span 2 / span 2;
   }
 
+  .lg\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
   .lg\:col-start-2 {
     grid-column-start: 2;
   }
@@ -1246,16 +1262,24 @@ select {
     grid-column-end: 8;
   }
 
+  .lg\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
   .lg\:mt-11 {
     margin-top: 2.75rem;
   }
 
-  .lg\:ml-8 {
-    margin-left: 2rem;
-  }
-
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:block {
@@ -1264,6 +1288,14 @@ select {
 
   .lg\:grid {
     display: grid;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:h-56 {
+    height: 14rem;
   }
 
   .lg\:w-auto {
@@ -1284,8 +1316,16 @@ select {
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .lg\:grid-flow-col {
+    grid-auto-flow: column;
+  }
+
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:items-center {
@@ -1298,8 +1338,23 @@ select {
     gap: 1.5rem;
   }
 
+  .lg\:gap-y-4 {
+    row-gap: 1rem;
+  }
+
+  .lg\:gap-x-10 {
+    -webkit-column-gap: 2.5rem;
+       -moz-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+  }
+
   .lg\:justify-self-end {
     justify-self: end;
+  }
+
+  .lg\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .lg\:px-0 {
@@ -1307,8 +1362,16 @@ select {
     padding-right: 0px;
   }
 
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-7xl {
