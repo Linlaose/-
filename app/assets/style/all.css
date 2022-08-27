@@ -131,7 +131,7 @@
   .swiper-button-next::after{
     content: " ";
   } /* 消除預設按鈕 */
-  .swipe-control-position-unset{
+  .position-unset{
     position: unset;
   } /* 為了讓輪播按鈕可控制位置 */
   .foods-swiper-pagination-bullet{
