@@ -28,6 +28,10 @@ var swiper = new Swiper('.foods-swiper', {
     },
     768: {
       slidesPerView: 3,
+      spaceBetween: 24
+    },
+    992: {
+      slidesPerView: 3,
       spaceBetween: 126
     }
   },
