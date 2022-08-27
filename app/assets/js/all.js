@@ -84,3 +84,6 @@ const certificateSwiper = new Swiper('.certificate-swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+// Animate on scroll
+AOS.init();
