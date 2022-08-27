@@ -122,6 +122,12 @@
     background-size: cover;
     content: "";
   }
+  @media(min-width: 992px){
+    .title-bg-img::after{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   .foods-swiper{
     height: 480px;
   }
