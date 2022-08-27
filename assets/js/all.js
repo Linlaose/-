@@ -27,7 +27,7 @@ var swiper = new Swiper('.foods-swiper', {
 
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 24
     },
     992: {
@@ -80,5 +80,7 @@ var certificateSwiper = new Swiper('.certificate-swiper', {
   scrollbar: {
     el: '.swiper-scrollbar'
   }
-});
+}); // Animate on scroll
+
+AOS.init();
 //# sourceMappingURL=all.js.map
