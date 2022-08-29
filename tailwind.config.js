@@ -95,6 +95,9 @@ module.exports = {
       animation: {
         spinCustom: 'spinAround 1s ease-in-out backwards',
       },
+      transitionProperty: {
+        'width': 'width',
+      }
     },
   },
   plugins: [
