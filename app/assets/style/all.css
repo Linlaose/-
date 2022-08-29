@@ -6,6 +6,9 @@
   html{
     @apply scroll-smooth;
   }
+  body{
+    font-family: 'Noto Serif TC', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", monospace, Arial, sans-serif;
+  }
   h1{
     @apply text-h1-fz;
   }
