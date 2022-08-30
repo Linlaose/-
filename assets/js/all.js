@@ -101,43 +101,48 @@ var signUpText = document.querySelector('#sign-up-mask-text-title');
 var signUpSubmit = document.querySelector('#signUpSubmit');
 /* 電腦以上才 show 出遮罩動畫 */
 //! 要再加上判斷式以防多頁式衝突
-// if (window.innerWidth >= 992) {
-//   loginButton.addEventListener('click', (e) => {
-//     // 登入的遮罩按鈕觸發後
-//     // 遮罩移動，文字反向移動
-//     loginMask.classList.add('translate-x-full', 'opacity-0')
-//     loginMaskText.classList.add('-translate-x-full')
-//     loginMask.classList.add('-z-10')
-//     signUpMask.classList.remove('-z-10')
-//     // 避免按不到註冊按鈕，將其移除
-//     loginMask.classList.remove('z-10')
-//     // 讓註冊遮罩回歸
-//     signUpMask.classList.remove('-translate-x-full', 'opacity-0')
-//     signUpText.classList.remove('translate-x-full')
-//   });
-//   signUpButton.addEventListener('click', (e) => {
-//     // 註冊的遮罩按鈕觸發後
-//     // 遮罩移動，文字反向移動
-//     signUpMask.classList.add('-translate-x-full', 'opacity-0')
-//     signUpText.classList.add('translate-x-full')
-//     signUpMask.classList.add('-z-10')
-//     // 避免註冊按鈕觸發後，無法再次觸發登入按鈕
-//     loginMask.classList.add('z-10')
-//     loginMask.classList.remove('-z-10')
-//     // 讓登入遮罩回歸
-//     loginMask.classList.remove('opacity-0', 'translate-x-full')
-//     loginMaskText.classList.remove('-translate-x-full')
-//   });
-// }
-// 購物車視窗
 
+if (window.innerWidth >= 992 && signUpMask) {
+  loginButton.addEventListener('click', function (e) {
+    // 登入的遮罩按鈕觸發後
+    // 遮罩移動，文字反向移動
+    loginMask.classList.add('translate-x-full', 'opacity-0');
+    loginMaskText.classList.add('-translate-x-full');
+    loginMask.classList.add('-z-10');
+    signUpMask.classList.remove('-z-10'); // 避免按不到註冊按鈕，將其移除
+
+    loginMask.classList.remove('z-10'); // 讓註冊遮罩回歸
+
+    signUpMask.classList.remove('-translate-x-full', 'opacity-0');
+    signUpText.classList.remove('translate-x-full');
+  });
+  signUpButton.addEventListener('click', function (e) {
+    // 註冊的遮罩按鈕觸發後
+    // 遮罩移動，文字反向移動
+    signUpMask.classList.add('-translate-x-full', 'opacity-0');
+    signUpText.classList.add('translate-x-full');
+    signUpMask.classList.add('-z-10'); // 避免註冊按鈕觸發後，無法再次觸發登入按鈕
+
+    loginMask.classList.add('z-10');
+    loginMask.classList.remove('-z-10'); // 讓登入遮罩回歸
+
+    loginMask.classList.remove('opacity-0', 'translate-x-full');
+    loginMaskText.classList.remove('-translate-x-full');
+  });
+} // 購物車視窗
+
+
+var orderButton = document.querySelector('#order');
 var closeCart = document.querySelector('#cart-close');
 var cartBox = document.querySelector('#cart-box');
 var continueShopping = document.querySelector('#continue-shopping');
-closeCart.addEventListener('click', function (e) {
-  cartBox.classList.add('hidden');
-});
-continueShopping.addEventListener('click', function (e) {
-  cartBox.classList.add('hidden');
-});
+
+if (orderButton) {
+  closeCart.addEventListener('click', function (e) {
+    cartBox.classList.add('hidden');
+  });
+  continueShopping.addEventListener('click', function (e) {
+    cartBox.classList.add('hidden');
+  });
+}
 //# sourceMappingURL=all.js.map
