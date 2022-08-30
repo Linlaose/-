@@ -66,6 +66,7 @@ module.exports = {
         'full': '9999px',
       },
       zIndex: {
+        '1': '1',
         '2': '2',
         '5': '5',
       },
@@ -85,14 +86,20 @@ module.exports = {
       rotate: {
         '250': '250deg',
       },
-      // backgroundImage: {
-      //   'banner': "url('../../assets/images/banner-chicken.jpg')",
-      // } 需使用 scale 而不影響字體變化，所以需要另起 css 套用偽元素
+      backgroundImage: {
+        'banner': "url('../images/banner-1.jpg')",
+      }, //需使用 scale 而不影響字體變化，所以需要另起 css 套用偽元素
       keyframes: {
-        spinAround: {
-          '0%': { transform: 'rotate(0)' },
-          '100%': { transform: 'rotate(360deg)' },
+        goBig: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.2)' },
         },
+        shakeX: {
+          '0%': { transform: 'translateX(0)' },
+          '33%': { transform: 'translateX(-20px)' },
+          '66%': { transform: 'translateX(20px)' },
+          '100%': { transform: 'translateX(0)' },
+        }, // 計算動畫間幾個間隔 (n)，則 % 數計算 100/(n+1)
         moveLeftFar: {
           '0%': { opacity: '0', left: '-128px' },
           '100%': { opacity: '1', left: '-256px' },
@@ -111,7 +118,8 @@ module.exports = {
         },
       },
       animation: {
-        spinCustom: 'spinAround 1s ease-in-out backwards',
+        goBig: 'goBig 10s linear forwards',
+        shakeX: 'shakeX 2.5s ease-in-out forwards',
         moveLeftFar: 'moveLeftFar 1s ease-in-out forwards',
         moveLeftNear: 'moveLeftNear 1s ease-in-out forwards',
         moveRightFar: 'moveRightFar 1s ease-in-out forwards',
