@@ -52,6 +52,7 @@ module.exports = {
         'true-gray-500': '#737272',
         'true-gray-700': '#404040',
         'true-gray-800': '#222222',
+        'warm-gray-50': '#F9F8F4',
       },
       borderRadius: {
         'none': '0',
@@ -71,6 +72,7 @@ module.exports = {
       spacing: {
         '7.5': '1.875rem', /* 30px */
         '15': '60px',
+        '54': '13.5rem',
         '160': '40rem',
         '7/25': '28%',
         '2/5': '40%',
