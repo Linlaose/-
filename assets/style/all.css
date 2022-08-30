@@ -2529,4 +2529,16 @@ select {
   .lg\:leading-tighter {
     line-height: 1.2;
   }
+}
+@media (min-width: 1280px) {
+
+  .xl\:h-184 {
+    height: 46rem;
+  }
+}
+@media (min-width: 1536px) {
+
+  .\32xl\:h-auto {
+    height: auto;
+  }
 } ;
