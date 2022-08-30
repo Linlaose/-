@@ -33,7 +33,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./assets/style/animate.css" />
     <link rel="stylesheet" href="./assets/style/toggle.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/style/all.css" />
@@ -61,29 +60,37 @@
           </div>
         </div>
         <!-- hamburger end -->
-        <div class="ml-5 logo">
+        <div class="logo">
           <!-- logo -->
-          <a href="#">
+          <a href="index.html">
             <img
-              class="w-full h-20 md:h-36 md:hover:animate-spinCustom"
+              class="w-full h-20 md:h-36 md:animate-shakeX"
               src="./assets/images/Logo.svg"
               alt="JinAiJia-logo"
             />
           </a>
           <div class="relative hidden md:block -top-20 logo-left">
-            <div class="absolute features features-animate">
-              <a class="hover:scale-105" href="#secret">本店特色</a>
+            <div
+              class="absolute hidden opacity-0 md:block animation-delay-1000 animate-moveLeftFar"
+            >
+              <a class="hover:font-bold" href="#secret">本店特色</a>
             </div>
-            <div class="absolute safety safety-animate">
-              <a class="hover:scale-105" href="#safety">吃得安心</a>
+            <div
+              class="absolute hidden opacity-0 md:block animate-moveLeftNear"
+            >
+              <a class="hover:font-bold" href="#safety">吃得安心</a>
             </div>
           </div>
           <div class="relative hidden md:block -top-20 logo-right">
-            <div class="absolute offers offers-animate">
-              <a class="hover:scale-105" href="./menu.html">餐點訂購</a>
+            <div
+              class="absolute hidden opacity-0 md:block animation-delay-2000 animate-moveRightFar"
+            >
+              <a class="hover:font-bold" href="./menu.html">餐點訂購</a>
             </div>
-            <div class="absolute about about-animate">
-              <a class="hover:scale-105" href="#about-us">關於我們</a>
+            <div
+              class="absolute hidden opacity-0 md:block animate-moveRightNear animation-delay-1000"
+            >
+              <a class="hover:font-bold" href="#about-us">關於我們</a>
             </div>
           </div>
         </div>

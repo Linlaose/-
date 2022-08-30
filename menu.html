@@ -33,7 +33,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./assets/style/animate.css" />
     <link rel="stylesheet" href="./assets/style/toggle.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/style/all.css" />
@@ -61,29 +60,37 @@
           </div>
         </div>
         <!-- hamburger end -->
-        <div class="ml-5 logo">
+        <div class="logo">
           <!-- logo -->
-          <a href="#">
+          <a href="index.html">
             <img
-              class="w-full h-20 md:h-36 md:hover:animate-spinCustom"
+              class="w-full h-20 md:h-36 md:animate-shakeX"
               src="./assets/images/Logo.svg"
               alt="JinAiJia-logo"
             />
           </a>
           <div class="relative hidden md:block -top-20 logo-left">
-            <div class="absolute features features-animate">
-              <a class="hover:scale-105" href="#secret">本店特色</a>
+            <div
+              class="absolute hidden opacity-0 md:block animation-delay-1000 animate-moveLeftFar"
+            >
+              <a class="hover:font-bold" href="#secret">本店特色</a>
             </div>
-            <div class="absolute safety safety-animate">
-              <a class="hover:scale-105" href="#safety">吃得安心</a>
+            <div
+              class="absolute hidden opacity-0 md:block animate-moveLeftNear"
+            >
+              <a class="hover:font-bold" href="#safety">吃得安心</a>
             </div>
           </div>
           <div class="relative hidden md:block -top-20 logo-right">
-            <div class="absolute offers offers-animate">
-              <a class="hover:scale-105" href="./menu.html">餐點訂購</a>
+            <div
+              class="absolute hidden opacity-0 md:block animation-delay-2000 animate-moveRightFar"
+            >
+              <a class="hover:font-bold" href="./menu.html">餐點訂購</a>
             </div>
-            <div class="absolute about about-animate">
-              <a class="hover:scale-105" href="#about-us">關於我們</a>
+            <div
+              class="absolute hidden opacity-0 md:block animate-moveRightNear animation-delay-1000"
+            >
+              <a class="hover:font-bold" href="#about-us">關於我們</a>
             </div>
           </div>
         </div>
@@ -120,7 +127,249 @@
     <!-- header end -->
 
     
-<main></main>
+<main>
+  <div class="container mx-auto">
+    <nav>
+      <ul class="grid grid-cols-12 gap-8">
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >全部</a
+            >
+          </h2>
+        </li>
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >套餐</a
+            >
+          </h2>
+        </li>
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >蔬菜</a
+            >
+          </h2>
+        </li>
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >滷味</a
+            >
+          </h2>
+        </li>
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >副食</a
+            >
+          </h2>
+        </li>
+        <li class="col-span-2 text-center">
+          <h2 class="border-l-2 border-r-2 border-true-gray-800">
+            <a
+              class="relative mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
+              href="#"
+              >輕食</a
+            >
+          </h2>
+        </li>
+      </ul>
+    </nav>
+    <ul class="grid grid-cols-11 my-8 gap-x-3 gap-y-6" data-type="global">
+      <!-- menu -->
+      <li class="col-span-3 col-start-2 transition-all duration-500 hover:scale-105">
+        <div class="shadow-xl card rounded-t-xl bg-warm-gray-50">
+          <img class="card-img rounded-t-xl" src="./assets/images/favorite-meal-set.jpg"></img>
+          <div class="p-2 card-header">
+            <p class="text-true-gray-400">套餐 - 個人</p>
+          </div>
+          <div class="p-2 text-center card-body"><h4 class="">半隻雞 +3 樣菜</h4></div>
+          <div class="p-2 text-right card-price"><strong class="text-4xl">$ 150</strong></div>
+          <button type="button" class="w-full bg-red-900">
+            <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
+              <i class="fa-solid fa-utensils"></i>
+              加入點餐單
+            </a>
+          </button>
+        </div>
+      </li>
+      <li class="col-span-3 col-start-5 transition-all duration-500 hover:scale-105">
+        <div class="shadow-xl card rounded-t-xl bg-warm-gray-50">
+          <img class="card-img rounded-t-xl" src="./assets/images/favorite-meal-set.jpg"></img>
+          <div class="p-2 card-header">
+            <p class="text-true-gray-400">套餐 - 個人</p>
+          </div>
+          <div class="p-2 text-center card-body"><h4 class="">半隻雞 +3 樣菜</h4></div>
+          <div class="p-2 text-right card-price"><strong class="text-4xl">$ 150</strong></div>
+          <button type="button" class="w-full bg-red-900">
+            <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
+              <i class="fa-solid fa-utensils"></i>
+              加入點餐單
+            </a>
+          </button>
+        </div>
+      </li>
+      <li class="col-span-3 col-start-8 transition-all duration-500 hover:scale-105">
+        <div class="shadow-xl card rounded-t-xl bg-warm-gray-50">
+          <img class="card-img rounded-t-xl" src="./assets/images/favorite-meal-set.jpg"></img>
+          <div class="p-2 card-header">
+            <p class="text-true-gray-400">套餐 - 個人</p>
+          </div>
+          <div class="p-2 text-center card-body"><h4 class="">半隻雞 +3 樣菜</h4></div>
+          <div class="p-2 text-right card-price"><strong class="text-4xl">$ 150</strong></div>
+          <button type="button" class="w-full bg-red-900">
+            <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
+              <i class="fa-solid fa-utensils"></i>
+              加入點餐單
+            </a>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <!-- menu end 之後應該是要拿 API 來讀取資料再渲染到畫面上-->
+  </div>
+
+<!-- cart -->
+<div id="cart-box" class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+  <!--
+    Background backdrop, show/hide based on slide-over state.
+
+    Entering: "ease-in-out duration-500"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in-out duration-500"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+  <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75"></div>
+
+  <div class="fixed inset-0 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none">
+        <!--
+          Slide-over panel, show/hide based on slide-over state.
+
+          Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+            From: "translate-x-0"
+            To: "translate-x-full"
+        -->
+        <div class="w-screen max-w-md pointer-events-auto">
+          <div class="flex flex-col h-full overflow-y-scroll bg-white shadow-xl">
+            <div class="flex-1 px-4 py-6 overflow-y-auto sm:px-6">
+              <div class="flex items-start justify-between">
+                <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">點餐單</h2>
+                <div class="flex items-center ml-3 h-7">
+                  <button id="cart-close" type="button" class="p-2 -m-2 text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Close panel</span>
+                    <!-- Heroicon name: outline/x-mark -->
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <div class="flow-root">
+                  <ul role="list" class="-my-6 divide-y divide-gray-200">
+                    <li class="flex py-6">
+                      <div class="flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200 rounded-md">
+                        <img src="./assets/images/favorite-meal-set.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="object-cover object-center w-full h-full">
+                      </div>
+
+                      <div class="flex flex-col flex-1 ml-4">
+                        <div>
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <h3>
+                              <a href="#">半隻雞 +3 樣菜</a>
+                            </h3>
+                            <p class="ml-4">$150.00</p>
+                          </div>
+                          <p class="mt-1 text-sm text-gray-500">套餐 - 個人</p>
+                        </div>
+                        <div class="flex items-end justify-between flex-1 text-sm">
+                          <p class="text-gray-500">數量 1</p>
+
+                          <div class="flex">
+                            <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">刪除</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="flex py-6">
+                      <div class="flex-shrink-0 w-24 h-24 overflow-hidden border border-gray-200 rounded-md">
+                        <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="object-cover object-center w-full h-full">
+                      </div>
+
+                      <div class="flex flex-col flex-1 ml-4">
+                        <div>
+                          <div class="flex justify-between text-base font-medium text-gray-900">
+                            <h3>
+                              <a href="#">Medium Stuff Satchel</a>
+                            </h3>
+                            <p class="ml-4">$32.00</p>
+                          </div>
+                          <p class="mt-1 text-sm text-gray-500">Blue</p>
+                        </div>
+                        <div class="flex items-end justify-between flex-1 text-sm">
+                          <p class="text-gray-500">Qty 1</p>
+
+                          <div class="flex">
+                            <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!-- More products... -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 py-6 border-t border-gray-200 sm:px-6">
+              <div class="flex justify-between text-base font-medium text-gray-900">
+                <p>總計</p>
+                <p>$262.00</p>
+              </div>
+              <div class="mt-6">
+                <a href="#" class="flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">結帳</a>
+              </div>
+              <div class="flex justify-center mt-6 text-sm text-center text-gray-500">
+                <p>
+                  or
+                  <button id="continue-shopping" type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
+                    繼續點餐
+                    <span aria-hidden="true"> &rarr;</span>
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- cart end -->
+
+</main>
 
 
     <footer class="pb-5 bg-orange-100 footer pt-9">
