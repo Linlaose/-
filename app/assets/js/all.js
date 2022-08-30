@@ -14,7 +14,9 @@ const swiper = new Swiper('.foods-swiper', {
   direction: 'horizontal',
   loop: true,
   speed: 1000,
-  autoplay: true,
+  autoplay: {
+    delay: 5000,
+  },
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -61,7 +63,7 @@ const certificateSwiper = new Swiper('.certificate-swiper', {
       slidesPerView: 1,
       loop: true,
     },
-    768: {
+    1280: {
       slidesPerView: 2,
       spaceBetween: 20,
       loop: false,
