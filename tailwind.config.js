@@ -93,9 +93,29 @@ module.exports = {
           '0%': { transform: 'rotate(0)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+        moveLeftFar: {
+          '0%': { opacity: '0', left: '-128px' },
+          '100%': { opacity: '1', left: '-256px' },
+        },
+        moveLeftNear: {
+          '0%': { opacity: '0', left: '0' },
+          '100%': { opacity: '1', left: '-128px' },
+        },
+        moveRightFar: {
+          '0%': { opacity: '0', right: '-128px' },
+          '100%': { opacity: '1', right: '-256px' },
+        },
+        moveRightNear: {
+          '0%': { opacity: '0', right: '0' },
+          '100%': { opacity: '1', right: '-128px' },
+        },
       },
       animation: {
         spinCustom: 'spinAround 1s ease-in-out backwards',
+        moveLeftFar: 'moveLeftFar 1s ease-in-out forwards',
+        moveLeftNear: 'moveLeftNear 1s ease-in-out forwards',
+        moveRightFar: 'moveRightFar 1s ease-in-out forwards',
+        moveRightNear: 'moveRightNear 1s ease-in-out forwards',
       },
       transitionProperty: {
         'width': 'width',
