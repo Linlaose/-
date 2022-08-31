@@ -878,6 +878,9 @@ select {
 .z-5 {
   z-index: 5;
 }
+.z-50 {
+  z-index: 50;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -1025,14 +1028,14 @@ select {
 .h-20 {
   height: 5rem;
 }
+.h-6 {
+  height: 1.5rem;
+}
 .h-5 {
   height: 1.25rem;
 }
 .h-7 {
   height: 1.75rem;
-}
-.h-6 {
-  height: 1.5rem;
 }
 .h-24 {
   height: 6rem;
@@ -1061,6 +1064,9 @@ select {
 .w-5 {
   width: 1.25rem;
 }
+.w-6 {
+  width: 1.5rem;
+}
 .w-auto {
   width: auto;
 }
@@ -1072,9 +1078,6 @@ select {
 }
 .w-screen {
   width: 100vw;
-}
-.w-6 {
-  width: 1.5rem;
 }
 .max-w-md {
   max-width: 28rem;
@@ -1138,117 +1141,41 @@ select {
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
 }
-@-webkit-keyframes moveLeftFar {
+@-webkit-keyframes bounce {
 
-  0% {
-    opacity: 0;
-    left: -128px;
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
-  100% {
-    opacity: 1;
-    left: -256px;
-  }
-}
-@keyframes moveLeftFar {
-
-  0% {
-    opacity: 0;
-    left: -128px;
-  }
-
-  100% {
-    opacity: 1;
-    left: -256px;
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
-.animate-moveLeftFar {
-  -webkit-animation: moveLeftFar 1s ease-in-out forwards;
-          animation: moveLeftFar 1s ease-in-out forwards;
-}
-@-webkit-keyframes moveLeftNear {
+@keyframes bounce {
 
-  0% {
-    opacity: 0;
-    left: 0;
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
   }
 
-  100% {
-    opacity: 1;
-    left: -128px;
-  }
-}
-@keyframes moveLeftNear {
-
-  0% {
-    opacity: 0;
-    left: 0;
-  }
-
-  100% {
-    opacity: 1;
-    left: -128px;
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
 }
-.animate-moveLeftNear {
-  -webkit-animation: moveLeftNear 1s ease-in-out forwards;
-          animation: moveLeftNear 1s ease-in-out forwards;
-}
-@-webkit-keyframes moveRightFar {
-
-  0% {
-    opacity: 0;
-    right: -128px;
-  }
-
-  100% {
-    opacity: 1;
-    right: -256px;
-  }
-}
-@keyframes moveRightFar {
-
-  0% {
-    opacity: 0;
-    right: -128px;
-  }
-
-  100% {
-    opacity: 1;
-    right: -256px;
-  }
-}
-.animate-moveRightFar {
-  -webkit-animation: moveRightFar 1s ease-in-out forwards;
-          animation: moveRightFar 1s ease-in-out forwards;
-}
-@-webkit-keyframes moveRightNear {
-
-  0% {
-    opacity: 0;
-    right: 0;
-  }
-
-  100% {
-    opacity: 1;
-    right: -128px;
-  }
-}
-@keyframes moveRightNear {
-
-  0% {
-    opacity: 0;
-    right: 0;
-  }
-
-  100% {
-    opacity: 1;
-    right: -128px;
-  }
-}
-.animate-moveRightNear {
-  -webkit-animation: moveRightNear 1s ease-in-out forwards;
-          animation: moveRightNear 1s ease-in-out forwards;
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -1267,6 +1194,9 @@ select {
 .flex-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.place-items-center {
+  place-items: center;
 }
 .items-start {
   -webkit-box-align: start;
@@ -1300,6 +1230,9 @@ select {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-5 {
   gap: 1.25rem;
@@ -1341,6 +1274,9 @@ select {
 .rounded-lg {
   border-radius: 0.5rem;
 }
+.rounded-full {
+  border-radius: 9999px;
+}
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -1349,9 +1285,6 @@ select {
 }
 .rounded {
   border-radius: 0.25rem;
-}
-.rounded-full {
-  border-radius: 9999px;
 }
 .rounded-t-md {
   border-top-left-radius: 0.375rem;
@@ -1783,13 +1716,9 @@ select {
        -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.animation-delay-1000 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
-}
-.animation-delay-2000 {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+.animation-delay-500 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 .bg-img {
     position: relative;
@@ -1965,39 +1894,6 @@ select {
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
-}
-@-webkit-keyframes goBig {
-
-  0% {
-    content: var(--tw-content);
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  100% {
-    content: var(--tw-content);
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-@keyframes goBig {
-
-  0% {
-    content: var(--tw-content);
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  100% {
-    content: var(--tw-content);
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-.before\:animate-goBig::before {
-  content: var(--tw-content);
-  -webkit-animation: goBig 10s linear forwards;
-          animation: goBig 10s linear forwards;
 }
 .before\:bg-banner::before {
   content: var(--tw-content);
@@ -2228,57 +2124,6 @@ select {
 
   .md\:w-11\/25 {
     width: 44%;
-  }
-
-  @-webkit-keyframes shakeX {
-
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-
-    33% {
-      -webkit-transform: translateX(-20px);
-              transform: translateX(-20px);
-    }
-
-    66% {
-      -webkit-transform: translateX(20px);
-              transform: translateX(20px);
-    }
-
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-
-  @keyframes shakeX {
-
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-
-    33% {
-      -webkit-transform: translateX(-20px);
-              transform: translateX(-20px);
-    }
-
-    66% {
-      -webkit-transform: translateX(20px);
-              transform: translateX(20px);
-    }
-
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-
-  .md\:animate-shakeX {
-    -webkit-animation: shakeX 2.5s ease-in-out forwards;
-            animation: shakeX 2.5s ease-in-out forwards;
   }
 
   .md\:flex-wrap {

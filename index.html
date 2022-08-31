@@ -64,32 +64,25 @@
           <!-- logo -->
           <a href="index.html">
             <img
-              class="w-full h-20 md:h-36 md:animate-shakeX"
+              id="logo-img"
+              class="w-full h-20 md:h-36"
               src="./assets/images/Logo.svg"
               alt="JinAiJia-logo"
             />
           </a>
           <div class="relative hidden md:block -top-20 logo-left">
-            <div
-              class="absolute hidden opacity-0 md:block animation-delay-1000 animate-moveLeftFar"
-            >
+            <div id="nav-secret" class="absolute hidden opacity-0 md:block">
               <a class="hover:font-bold" href="#secret">本店特色</a>
             </div>
-            <div
-              class="absolute hidden opacity-0 md:block animate-moveLeftNear"
-            >
+            <div id="nav-safety" class="absolute hidden opacity-0 md:block">
               <a class="hover:font-bold" href="#safety">吃得安心</a>
             </div>
           </div>
           <div class="relative hidden md:block -top-20 logo-right">
-            <div
-              class="absolute hidden opacity-0 md:block animation-delay-2000 animate-moveRightFar"
-            >
+            <div id="nav-order" class="absolute hidden opacity-0 md:block">
               <a class="hover:font-bold" href="login.html">餐點訂購</a>
             </div>
-            <div
-              class="absolute hidden opacity-0 md:block animate-moveRightNear animation-delay-1000"
-            >
+            <div id="nav-about-us" class="absolute hidden opacity-0 md:block">
               <a class="hover:font-bold" href="#about-us">關於我們</a>
             </div>
           </div>
@@ -130,7 +123,8 @@
 <div class="overflow-hidden">
   <!-- banner -->
   <div
-    class="relative banner h-160 before:absolute before:top-0 before:left-0 before:-z-1 before:w-full before:h-160 before:bg-banner before:bg-cover before:bg-center before:animate-goBig"
+    id="banner-img"
+    class="relative banner h-160 before:absolute before:top-0 before:left-0 before:-z-1 before:w-full before:h-160 before:bg-banner before:bg-cover before:bg-center"
   >
     <h2
       class="container absolute w-full ml-6 tracking-wider text-white -translate-x-1/2 -translate-y-1/2 opacity-75 top-1/2 left-1/2 lg:hidden"
@@ -557,6 +551,22 @@
   <!-- material-imgs end -->
 </main>
 
+    <div
+      id="loader-wrapper"
+      class="fixed inset-0 z-50 grid bg-white loader-wrapper place-items-center"
+    >
+      <div class="flex gap-2">
+        <div class="w-6 h-6 bg-black rounded-full loader animate-bounce"></div>
+        <div
+          class="w-6 h-6 bg-black rounded-full loader animate-bounce animation-delay-500"
+        ></div>
+        <div class="w-6 h-6 bg-black rounded-full loader animate-bounce"></div>
+        <div
+          class="w-6 h-6 bg-black rounded-full loader animate-bounce animation-delay-500"
+        ></div>
+      </div>
+    </div>
+    <!-- pre-loader end -->
 
     <footer class="pb-5 bg-orange-100 footer pt-9">
       <!-- footer -->
