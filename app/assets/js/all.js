@@ -157,3 +157,57 @@ if (orderButton) {
     cartBox.classList.add('hidden');
   });
 }
+
+// pre-loader
+
+const fadeOut = () => {
+  const loaderWrapper = document.querySelector('#loader-wrapper');
+  loaderWrapper.classList.add('opacity-0', 'invisible', 'hidden');
+}
+
+/* 全部 logo 動畫
+1. logo 左右搖
+2. 本店特色、吃得安心 左移
+3. 餐點訂購、關於我們 右移
+4. banner 圖片放大
+*/
+
+// logo
+const shake = () => {
+  const logoImage = document.querySelector('#logo-img');
+  logoImage.classList.add('md:animate-shakeX');
+}
+// 本店特色
+const moveLeftFar = () => {
+  const navSecret = document.querySelector('#nav-secret');
+  navSecret.classList.add('animation-delay-1000', 'animate-moveLeftFar')
+}
+// 吃得安心
+const moveLeftNear = () => {
+  const navSafety = document.querySelector('#nav-safety');
+  navSafety.classList.add('animate-moveLeftNear')
+}
+// 餐點訂購
+const moveRightFar = () => {
+  const navOrder = document.querySelector('#nav-order');
+  navOrder.classList.add('animation-delay-2000', 'animate-moveRightFar')
+}
+// 關於我們
+const moveRightNear = () => {
+  const navAboutUs = document.querySelector('#nav-about-us');
+  navAboutUs.classList.add('animation-delay-1000', 'animate-moveRightNear')
+}
+// banner
+const banner = () => {
+  const bannerImage = document.querySelector('#banner-img');
+  bannerImage.classList.add('before:animate-goBig');
+}
+window.addEventListener('load', () => {
+  fadeOut();
+  shake();
+  moveLeftFar();
+  moveLeftNear();
+  moveRightFar();
+  moveRightNear();
+  banner();
+}); // 所有讀取完成後須立即執行的動畫
