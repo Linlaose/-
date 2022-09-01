@@ -158,41 +158,65 @@ var fadeOut = function fadeOut() {
 4. banner 圖片放大
 */
 // logo
+// const shake = () => {
+//   const logoImage = document.querySelector('#logo-img');
+//   logoImage.classList.add('md:animate-shakeX');
+// }
 
 
 var shake = function shake() {
   var logoImage = document.querySelector('#logo-img');
-  logoImage.classList.add('md:animate-shakeX');
+  logoImage.classList.add('animation-shake');
 }; // 本店特色
+// const moveLeftFar = () => {
+//   const navSecret = document.querySelector('#nav-secret');
+//   navSecret.classList.add('animation-delay-1000', 'animate-moveLeftFar')
+// }
 
 
 var moveLeftFar = function moveLeftFar() {
   var navSecret = document.querySelector('#nav-secret');
-  navSecret.classList.add('animation-delay-1000', 'animate-moveLeftFar');
+  navSecret.classList.add('animation-move-left-far');
 }; // 吃得安心
+// const moveLeftNear = () => {
+//   const navSafety = document.querySelector('#nav-safety');
+//   navSafety.classList.add('animate-moveLeftNear')
+// }
 
 
 var moveLeftNear = function moveLeftNear() {
   var navSafety = document.querySelector('#nav-safety');
-  navSafety.classList.add('animate-moveLeftNear');
+  navSafety.classList.add('animation-move-left-near');
 }; // 餐點訂購
+// const moveRightFar = () => {
+//   const navOrder = document.querySelector('#nav-order');
+//   navOrder.classList.add('animation-delay-2000', 'animate-moveRightFar')
+// }
 
 
 var moveRightFar = function moveRightFar() {
   var navOrder = document.querySelector('#nav-order');
-  navOrder.classList.add('animation-delay-2000', 'animate-moveRightFar');
+  navOrder.classList.add('animation-move-right-far');
 }; // 關於我們
+// const moveRightNear = () => {
+//   const navAboutUs = document.querySelector('#nav-about-us');
+//   navAboutUs.classList.add('animation-delay-1000', 'animate-moveRightNear')
+// }
 
 
 var moveRightNear = function moveRightNear() {
   var navAboutUs = document.querySelector('#nav-about-us');
-  navAboutUs.classList.add('animation-delay-1000', 'animate-moveRightNear');
+  navAboutUs.classList.add('animation-move-right-near');
 }; // banner
+// const banner = () => {
+//   const bannerImage = document.querySelector('#banner-img');
+//   bannerImage.classList.add('animate-goBig');
+// }
 
 
 var banner = function banner() {
   var bannerImage = document.querySelector('#banner-img');
-  bannerImage.classList.add('before:animate-goBig');
+  bannerImage.classList.add('animation-scale');
 };
 
 window.addEventListener('load', function () {
@@ -204,5 +228,5 @@ window.addEventListener('load', function () {
   moveRightNear();
   banner();
 }); // 所有讀取完成後須立即執行的動畫
-//為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果
+//!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
 //# sourceMappingURL=all.js.map
