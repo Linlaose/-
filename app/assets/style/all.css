@@ -160,6 +160,11 @@
       border-radius: 50% 20%;
     }
   }
+
+  /* 登入、註冊遮罩動畫 */
+  .transform-translate-x-full{
+    transform: translateX(-420px);
+  }
 } ;
 
 

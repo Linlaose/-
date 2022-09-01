@@ -120,7 +120,7 @@ if (window.innerWidth >= 992 && signUpMask) {
     loginMask.classList.remove('z-10')
 
     // 讓註冊遮罩回歸
-    signUpMask.classList.remove('-translate-x-full', 'opacity-0')
+    signUpMask.classList.remove('translate-x-full', 'opacity-0')
     signUpText.classList.remove('translate-x-full')
   });
 
@@ -128,10 +128,11 @@ if (window.innerWidth >= 992 && signUpMask) {
     // 註冊的遮罩按鈕觸發後
 
     // 遮罩移動，文字反向移動
-    signUpMask.classList.add('-translate-x-full', 'opacity-0')
+    signUpMask.classList.add('translate-x-full', 'opacity-0')
+    // signUpMask.classList.add('transform-translate-x-full') //只有寫 translate-x-full 會正常移動，其他數值都沒辦法
     signUpText.classList.add('translate-x-full')
 
-    signUpMask.classList.add('-z-10')
+    // signUpMask.classList.add('-z-10')
 
     // 避免註冊按鈕觸發後，無法再次觸發登入按鈕
     loginMask.classList.add('z-10')
