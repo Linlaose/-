@@ -21,12 +21,12 @@ signUpButton.addEventListener('click', () => {
     }
 
     axios.post(`${urlAPI}/users`, obj)
-      .then((response) => {
-        console.log(response);
+      .then((res) => {
+        console.log(res);
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'Your work has been saved',
+          title: res.data.message,
           showConfirmButton: true,
         })
       })
@@ -39,6 +39,9 @@ signUpButton.addEventListener('click', () => {
           confirmButtonText: 'Cool'
         })
       });
+    signUpEmail.value = "";
+    signUpNickname.value = "";
+    signUpPassword.value = "";
   };
   goSignUp();
 });
