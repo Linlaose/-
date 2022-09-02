@@ -213,12 +213,11 @@ var moveRightNear = function moveRightNear() {
 //   const bannerImage = document.querySelector('#banner-img');
 //   bannerImage.classList.add('animate-goBig');
 // }
+// const banner = () => {
+//   const bannerImage = document.querySelector('#banner-img');
+//   bannerImage.classList.add('animation-scale');
+// } 等等註解取消
 
-
-var banner = function banner() {
-  var bannerImage = document.querySelector('#banner-img');
-  bannerImage.classList.add('animation-scale');
-};
 
 window.addEventListener('load', function () {
   fadeOut();
@@ -226,8 +225,90 @@ window.addEventListener('load', function () {
   moveLeftFar();
   moveLeftNear();
   moveRightFar();
-  moveRightNear();
-  banner();
+  moveRightNear(); // banner();
 }); // 所有讀取完成後須立即執行的動畫
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
+"use strict";
+
+var loginEmail = document.querySelector('#login-email');
+var loginPassword = document.querySelector('#login-password');
+var loginButton = document.querySelector('#login-button');
+loginButton.addEventListener('click', function () {
+  var goLogin = function goLogin() {
+    var email = loginEmail.value;
+    var pwd = loginPassword.value;
+    obj = {
+      "user": {
+        "email": email,
+        "password": pwd
+      }
+    };
+    axios.post("".concat(urlAPI, "/users/sign_in"), obj).then(function (res) {
+      console.log(res.data.message);
+      console.log(res.headers.authorization);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: res.data.message,
+        showConfirmButton: true
+      });
+    })["catch"](function (err) {
+      console.log(err.response.data.message);
+      Swal.fire({
+        title: err.response.data.message,
+        text: err.response.data.error,
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      });
+    });
+    loginEmail.value = "";
+    loginPassword.value = "";
+  };
+
+  goLogin();
+});
+"use strict";
+
+var urlAPI = 'https://todoo.5xcamp.us';
+var signUpEmail = document.querySelector('#sign-up-email');
+var signUpNickname = document.querySelector('#nickname');
+var signUpPassword = document.querySelector('#sign-up-password');
+var signUpButton = document.querySelector('#sign-up-submit');
+var obj = {};
+signUpButton.addEventListener('click', function () {
+  var goSignUp = function goSignUp() {
+    var email = signUpEmail.value;
+    var nickname = signUpNickname.value;
+    var pwd = signUpPassword.value;
+    obj = {
+      "user": {
+        "email": email,
+        "nickname": nickname,
+        "password": pwd
+      }
+    };
+    axios.post("".concat(urlAPI, "/users"), obj).then(function (res) {
+      console.log(res);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: res.data.message,
+        showConfirmButton: true
+      });
+    })["catch"](function (err) {
+      console.log(err);
+      Swal.fire({
+        title: err.response.data.message,
+        text: err.response.data.error,
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      });
+    });
+    signUpEmail.value = "";
+    signUpNickname.value = "";
+    signUpPassword.value = "";
+  };
+
+  goSignUp();
+});
 //# sourceMappingURL=all.js.map

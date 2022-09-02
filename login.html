@@ -127,7 +127,7 @@
     >
       <!-- login-block -->
       <div
-        class="relative w-full max-w-md p-3 bg-white shadow-lg lg:mx-3 lg:h-96"
+        class="relative w-full max-w-md p-3 bg-white shadow-lg lg:mx-3 lg:h-106"
       >
         <div>
           <img
@@ -156,7 +156,7 @@
             <div>
               <label for="email-address" class="sr-only">Email address</label>
               <input
-                id="email-address"
+                id="login-email"
                 name="email"
                 type="email"
                 autocomplete="email"
@@ -168,7 +168,7 @@
             <div>
               <label for="password" class="sr-only">Password</label>
               <input
-                id="password"
+                id="login-password"
                 name="password"
                 type="password"
                 autocomplete="current-password"
@@ -204,13 +204,13 @@
 
           <div class="!mt-15">
             <!-- important mt 是為了蓋掉 form 的 space-y-6 屬性 -->
-            <button
+            <!-- <button
               id="loginSubmit"
               type="submit"
               class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                <!-- Heroicon name: mini/lock-closed -->
+                Heroicon name: mini/lock-closed
                 <svg
                   class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400"
                   xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +226,13 @@
                 </svg>
               </span>
               登入
-            </button>
+            </button> -->
+            <input
+              id="login-button"
+              class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              type="button"
+              value="登入"
+            />
           </div>
         </form>
         <div
@@ -283,21 +289,33 @@
           <input type="hidden" name="remember" value="true" />
           <div class="-space-y-px rounded-md shadow-sm">
             <div>
+              <label for="nickname" class="sr-only">Email address</label>
+              <input
+                id="nickname"
+                name="text"
+                type="text"
+                autocomplete="text"
+                required
+                class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="請輸入會員暱稱"
+              />
+            </div>
+            <div>
               <label for="email-address" class="sr-only">Email address</label>
               <input
-                id="email-address"
+                id="sign-up-email"
                 name="email"
                 type="email"
                 autocomplete="email"
                 required
-                class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="請輸入帳號信箱"
               />
             </div>
             <div>
               <label for="password" class="sr-only">Password</label>
               <input
-                id="password"
+                id="sign-up-password"
                 name="password"
                 type="password"
                 autocomplete="current-password"
@@ -306,10 +324,10 @@
                 placeholder="請輸入密碼"
               />
             </div>
-            <div>
+            <!-- <div>
               <label for="password" class="sr-only">Password confirm</label>
               <input
-                id="password-confirm"
+                id="sign-up-password-confirm"
                 name="password-confirm"
                 type="password"
                 autocomplete="current-password"
@@ -317,7 +335,7 @@
                 class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="請再次輸入密碼"
               />
-            </div>
+            </div> -->
           </div>
 
           <!-- <div class="flex items-center justify-between">
@@ -344,13 +362,12 @@
           </div> -->
 
           <div>
-            <button
-              id="signUpSubmit"
-              type="submit"
+            <!-- <button
+              id="sign-up-submit"
               class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                <!-- Heroicon name: mini/lock-closed -->
+                Heroicon name: mini/lock-closed
                 <svg
                   class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400"
                   xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +383,13 @@
                 </svg>
               </span>
               註冊
-            </button>
+            </button> -->
+            <input
+              id="sign-up-submit"
+              type="button"
+              value="註冊"
+              class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md cursor-pointer group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            />
           </div>
         </form>
         <div
@@ -462,6 +485,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
