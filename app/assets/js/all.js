@@ -218,15 +218,18 @@ const moveRightNear = () => {
   const navAboutUs = document.querySelector('#nav-about-us');
   navAboutUs.classList.add('animation-move-right-near')
 }
+
+
 // banner
 // const banner = () => {
 //   const bannerImage = document.querySelector('#banner-img');
 //   bannerImage.classList.add('animate-goBig');
 // }
-const banner = () => {
-  const bannerImage = document.querySelector('#banner-img');
-  bannerImage.classList.add('animation-scale');
-}
+// const banner = () => {
+//   const bannerImage = document.querySelector('#banner-img');
+//   bannerImage.classList.add('animation-scale');
+// } 等等註解取消
+
 window.addEventListener('load', () => {
   fadeOut();
   shake();
@@ -234,7 +237,7 @@ window.addEventListener('load', () => {
   moveLeftNear();
   moveRightFar();
   moveRightNear();
-  banner();
+  // banner();
 }); // 所有讀取完成後須立即執行的動畫
 
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)

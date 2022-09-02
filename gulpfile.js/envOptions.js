@@ -38,7 +38,7 @@ let envOptions = {
     ],
     concat: 'all.js',
     path: `${distPath}/assets/js`,
-  },
+  }, // 這裡針對 js 的任務是：將 src 裡全部的 js，concat(捆)成一包 all.js 最後輸出到 path
   vendors: {
     src: [
       `${nodePath}/jquery/dist/**/jquery.min.js`,
