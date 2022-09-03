@@ -866,6 +866,9 @@ select {
 .left-24 {
   left: 6rem;
 }
+.right-2 {
+  right: 0.5rem;
+}
 .top-0 {
   top: 0px;
 }
@@ -874,6 +877,9 @@ select {
 }
 .z-2 {
   z-index: 2;
+}
+.z-20 {
+  z-index: 20;
 }
 .z-5 {
   z-index: 5;
@@ -1022,6 +1028,9 @@ select {
 .h-3\/4 {
   height: 75%;
 }
+.h-10 {
+  height: 2.5rem;
+}
 .h-4 {
   height: 1rem;
 }
@@ -1060,6 +1069,9 @@ select {
 }
 .w-8 {
   width: 2rem;
+}
+.w-10 {
+  width: 2.5rem;
 }
 .w-5 {
   width: 1.25rem;
@@ -2132,9 +2144,72 @@ select {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+} .hover\:before\:absolute:hover::before {
+  content: var(--tw-content);
+  position: absolute;
+} .hover\:before\:top-1:hover::before {
+  content: var(--tw-content);
+  top: 0.25rem;
+} .hover\:before\:-left-20:hover::before {
+  content: var(--tw-content);
+  left: -5rem;
+} .hover\:before\:top-17\.5:hover::before {
+  content: var(--tw-content);
+  top: 4.375rem;
+} .hover\:before\:rounded-lg:hover::before {
+  content: var(--tw-content);
+  border-radius: 0.5rem;
+} .hover\:before\:bg-orange-100:hover::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+} .hover\:before\:p-1:hover::before {
+  content: var(--tw-content);
+  padding: 0.25rem;
+} .hover\:before\:text-true-gray-800:hover::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(34 34 34 / var(--tw-text-opacity));
+} .hover\:before\:content-\[\'\6703\54E1\4E2D\5FC3\'\]:hover::before {
+  --tw-content: '會員中心';
+  content: var(--tw-content);
+} .hover\:before\:content-\[\'\9910\9EDE\8A02\8CFC\'\]:hover::before {
+  --tw-content: '餐點訂購';
+  content: var(--tw-content);
+} .hover\:after\:absolute:hover::after {
+  content: var(--tw-content);
+  position: absolute;
+} .hover\:after\:top-3:hover::after {
+  content: var(--tw-content);
+  top: 0.75rem;
+} .hover\:after\:-left-2:hover::after {
+  content: var(--tw-content);
+  left: -0.5rem;
+} .hover\:after\:top-19\.5:hover::after {
+  content: var(--tw-content);
+  top: 4.875rem;
 } .hover\:after\:w-32:hover::after {
   content: var(--tw-content);
   width: 8rem;
+} .hover\:after\:border-8:hover::after {
+  content: var(--tw-content);
+  border-width: 8px;
+} .hover\:after\:border-solid:hover::after {
+  content: var(--tw-content);
+  border-style: solid;
+} .hover\:after\:border-t-transparent:hover::after {
+  content: var(--tw-content);
+  border-top-color: transparent;
+} .hover\:after\:border-r-transparent:hover::after {
+  content: var(--tw-content);
+  border-right-color: transparent;
+} .hover\:after\:border-b-transparent:hover::after {
+  content: var(--tw-content);
+  border-bottom-color: transparent;
+} .hover\:after\:border-l-orange-100:hover::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-left-color: rgb(255 237 213 / var(--tw-border-opacity));
 } .focus\:z-10:focus {
   z-index: 10;
 } .focus\:border-indigo-500:focus {
