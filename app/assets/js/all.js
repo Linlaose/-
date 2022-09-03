@@ -200,7 +200,7 @@ const moveLeftNear = () => {
   const navSafety = document.querySelector('#nav-safety');
   navSafety.classList.add('animation-move-left-near')
 }
-// 餐點訂購
+// 會員中心
 // const moveRightFar = () => {
 //   const navOrder = document.querySelector('#nav-order');
 //   navOrder.classList.add('animation-delay-2000', 'animate-moveRightFar')
@@ -241,3 +241,12 @@ window.addEventListener('load', () => {
 }); // 所有讀取完成後須立即執行的動畫
 
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
+
+function showBtnCondition() {
+  if ($(this).scrollTop() > 1000) {
+    $('#member-order-nav').fadeIn();
+  } else {
+    $('#member-order-nav').fadeOut();
+  }
+}
+$(window).scroll(showBtnCondition);
