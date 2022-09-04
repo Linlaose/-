@@ -162,30 +162,47 @@
   }
 
   /* 登入、註冊遮罩動畫 */
-  .transform-translate-x-full{
+  .transform-translate-x-full {
     transform: translateX(-420px);
   }
-} ;
-
+}
 
 /* 動畫 */
 /* keyframes */
 @keyframes goBig {
-  0% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
 
-  100% {transform: scale(1.2);}
+  100% {
+    transform: scale(1.2);
+  }
 }
 @keyframes shakeX {
-  0% {transform: translateX(0);}
-  33% {transform: translateX(-20px);}
-  66% {transform: translateX(20px);}
-  100% {transform: translateX(0);}
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-20px);
+  }
+  66% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes moveLeftFar {
-  0% {opacity: 0; left: -128px;}
-  100% {opacity: 1;left: -256px;}
+  0% {
+    opacity: 0;
+    left: -128px;
+  }
+  100% {
+    opacity: 1;
+    left: -256px;
+  }
 }
-@keyframes moveLeftNear{
+@keyframes moveLeftNear {
   0% {
     opacity: 0;
     left: 0;
@@ -195,7 +212,7 @@
     left: -128px;
   }
 }
-@keyframes moveRightFar{
+@keyframes moveRightFar {
   0% {
     opacity: 0;
     right: -128px;
@@ -205,7 +222,7 @@
     right: -256px;
   }
 }
-@keyframes moveRightNear{
+@keyframes moveRightNear {
   0% {
     opacity: 0;
     right: 0;
@@ -217,21 +234,21 @@
 }
 
 /* animation */
-.animation-scale::before{
+.animation-scale::before {
   animation: goBig 10s linear forwards;
 } /* banner  */
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .animation-shake {
     animation: shakeX 2.5s ease-in-out forwards;
   }
 } /* logo */
 
-.animation-move-left-far{
+.animation-move-left-far {
   animation: moveLeftFar 1s ease-in-out 1s forwards;
 } /* 本店特色 */
 
-.animation-move-left-near{
+.animation-move-left-near {
   animation: moveLeftNear 1s ease-in-out forwards;
 } /* 吃得安心 */
 
