@@ -25,6 +25,7 @@ if (logOut) {
         })
         localStorage.clear();
         window.location.href = 'index.html';
+        console.log(res);
       }).catch((err) => {
         console.log(err);
       });

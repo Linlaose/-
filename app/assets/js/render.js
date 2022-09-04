@@ -19,8 +19,13 @@ if (orderHistoryHTML || accountHTML || changePwdHTML) {
     // 判斷是否已登入會員
     console.log(memberToken);
     userName.textContent = `${user}，您好`
-    disabledAccount.value = localStorage.getItem('account');
-    disabledLINE.value = localStorage.getItem('user');
+    if (disabledAccount) {
+      // 因 disabledAccount 或 disabledLINE 欄位只存在 accountHTML 頁面
+      // 所以必須加上此判斷式，避免在 orderHistoryHTML 或 changePwdHTML 頁面出現錯誤
+      // 導致無法進行登出
+      disabledAccount.value = localStorage.getItem('account');
+      disabledLINE.value = localStorage.getItem('user');
+    }
   } else {
     Swal.fire({
       position: 'center',
