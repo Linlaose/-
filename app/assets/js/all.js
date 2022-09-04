@@ -104,7 +104,7 @@ const signUpMask = document.querySelector('#sign-up-mask');
 const signUpText = document.querySelector('#sign-up-mask-text-title')
 const signUpSubmit = document.querySelector('#signUpSubmit')
 
-/* 電腦以上才 show 出遮罩動畫 */ //! 要再加上判斷式以防多頁式衝突
+/* 電腦以上才 show 出遮罩動畫 */ //! translate-x 的正負值會跟 right 或 left 衝突，要注意挑選
 if (window.innerWidth >= 992 && signUpMask) {
   loginButton.addEventListener('click', (e) => {
     // 登入的遮罩按鈕觸發後
@@ -120,7 +120,8 @@ if (window.innerWidth >= 992 && signUpMask) {
     loginMask.classList.remove('z-10')
 
     // 讓註冊遮罩回歸
-    signUpMask.classList.remove('translate-x-full', 'opacity-0')
+    signUpMask.classList.add('left-0')
+    signUpMask.classList.remove('-translate-x-full', 'opacity-0')
     signUpText.classList.remove('translate-x-full')
   });
 
@@ -128,7 +129,7 @@ if (window.innerWidth >= 992 && signUpMask) {
     // 註冊的遮罩按鈕觸發後
 
     // 遮罩移動，文字反向移動
-    signUpMask.classList.add('translate-x-full', 'opacity-0')
+    signUpMask.classList.add('-translate-x-full', 'opacity-0')
     // signUpMask.classList.add('transform-translate-x-full') //只有寫 translate-x-full 會正常移動，其他數值都沒辦法
     signUpText.classList.add('translate-x-full')
 
@@ -225,10 +226,12 @@ const moveRightNear = () => {
 //   const bannerImage = document.querySelector('#banner-img');
 //   bannerImage.classList.add('animate-goBig');
 // }
-// const banner = () => {
-//   const bannerImage = document.querySelector('#banner-img');
-//   bannerImage.classList.add('animation-scale');
-// } 等等註解取消
+const banner = () => {
+  const bannerImage = document.querySelector('#banner-img');
+  if (bannerImage) {
+    bannerImage.classList.add('animation-scale');
+  }
+}
 
 window.addEventListener('load', () => {
   fadeOut();
@@ -237,7 +240,7 @@ window.addEventListener('load', () => {
   moveLeftNear();
   moveRightFar();
   moveRightNear();
-  // banner();
+  banner();
 }); // 所有讀取完成後須立即執行的動畫
 
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
