@@ -6,7 +6,7 @@ current: account
 ---
 
 <main>
-  <div class="container mx-auto my-6 lg:my-16">
+  <div id="account" class="container mx-auto my-6 lg:my-16">
     <div class="lg:grid lg:grid-cols-12 lg:gap-4">
       <aside class="mx-6 bg-orange-100 lg:col-span-3 lg:h-54 lg:m-0">
         <ul class="md:flex md:flex-wrap">
@@ -57,7 +57,9 @@ current: account
           帳號資料
           <p>
             <span id="user-name" class="text-p-fz">XX，您好</span>
-            <a class="text-sm hover:text-orange-400" href="#">登出</a>
+            <a id="log-out" class="text-sm hover:text-orange-400" href="#"
+              ><i class="fa-solid fa-right-from-bracket"></i
+            ></a>
           </p>
         </h1>
         <form
@@ -65,25 +67,41 @@ current: account
           class="p-6 mt-4 bg-white shadow-lg md:flex md:justify-between"
         >
           <p class="w-full md:w-11/25">
-            <label for="email">會員帳號：</label
+            <label for="disabled-account">會員帳號：</label
             ><input
-              class="block w-full rounded-2xl"
+              class="block w-full border-0 rounded-2xl disabled:bg-true-gray-500 disabled:bg-opacity-10 disabled:text-true-gray-400"
               type="email"
-              name="email"
-              id="email"
+              name="disabled-account"
+              id="disabled-account"
+              disabled
             />
           </p>
           <p class="w-full pt-2 md:w-11/25 md:pt-0">
-            <label for="people">LINE 名稱：</label
+            <label for="disabled-LINE-user">LINE 名稱：</label
             ><input
-              class="block w-full rounded-2xl"
+              class="block w-full border-0 rounded-2xl disabled:bg-true-gray-500 disabled:bg-opacity-10 disabled:text-true-gray-400"
               type="text"
-              name="people"
-              id="people"
+              name="disabled-LINE-user"
+              id="disabled-LINE-user"
+              disabled
             />
           </p>
         </form>
       </div>
     </div>
+    <div
+      id="menu-nav"
+      class="fixed z-20 hidden -translate-y-1/2 md:block dynamic-nav top-18/25 right-2"
+    >
+      <!-- 餐點訂購 icon -->
+      <div
+        class="w-10 h-10 text-center hover:before:top-1 hover:before:-left-20 hover:before:content-['餐點訂購'] hover:before:text-true-gray-800 hover:before:absolute hover:before:p-1 hover:before:rounded-lg hover:before:bg-orange-100 hover:after:border-solid hover:after:border-8 hover:after:border-t-transparent hover:after:border-r-transparent hover:after:border-b-transparent hover:after:absolute hover:after:top-3 hover:after:-left-2 hover:after:border-l-orange-100"
+      >
+        <a href="menu.html">
+          <i class="leading-none text-red-900 text-h2-fz fa-solid fa-file"></i>
+        </a>
+      </div>
+    </div>
+    <!-- 餐點訂購 icon end -->
   </div>
 </main>
