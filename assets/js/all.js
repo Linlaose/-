@@ -243,40 +243,121 @@ $(window).scroll(showBtnCondition);
 var loginEmail = document.querySelector('#login-email');
 var loginPassword = document.querySelector('#login-password');
 var loginButton = document.querySelector('#login-button');
-loginButton.addEventListener('click', function () {
-  var goLogin = function goLogin() {
-    var email = loginEmail.value;
-    var pwd = loginPassword.value;
+
+if (loginButton) {
+  loginButton.addEventListener('click', function () {
+    var goLogin = function goLogin() {
+      var email = loginEmail.value;
+      var pwd = loginPassword.value;
+      obj = {
+        "user": {
+          "email": email,
+          "password": pwd
+        }
+      };
+      axios.post("".concat(urlAPI, "/users/sign_in"), obj).then(function (res) {
+        localStorage.setItem('token', res.headers.authorization); // 儲存會員憑證
+
+        localStorage.setItem('user', res.data.nickname); // 儲存會員暱稱
+
+        localStorage.setItem('account', email); // 儲存會員帳號
+
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: res.data.message,
+          showConfirmButton: true
+        }).then(function (result) {
+          // 這段語法出自 sweetAlert2 
+          if (result.isConfirmed) {
+            window.location.href = 'order-history.html';
+          }
+        });
+      })["catch"](function (err) {
+        console.log(err.response.data.message);
+        Swal.fire({
+          title: err.response.data.message,
+          text: err.response.data.error,
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        });
+      });
+      loginEmail.value = "";
+      loginPassword.value = "";
+    };
+
+    goLogin();
+  });
+}
+
+;
+"use strict";
+
+var logOut = document.querySelector('#log-out');
+
+if (logOut) {
+  logOut.addEventListener('click', function () {
+    goLogOut();
+  });
+
+  var goLogOut = function goLogOut() {
+    var token = localStorage.getItem('token');
     obj = {
-      "user": {
-        "email": email,
-        "password": pwd
+      headers: {
+        Authorization: token
       }
     };
-    axios.post("".concat(urlAPI, "/users/sign_in"), obj).then(function (res) {
-      console.log(res.data.message);
-      console.log(res.headers.authorization);
+    axios["delete"]("".concat(urlAPI, "/users/sign_out"), obj).then(function (res) {
       Swal.fire({
         position: 'center',
         icon: 'success',
         title: res.data.message,
-        showConfirmButton: true
+        showConfirmButton: false,
+        timer: 1500
       });
+      localStorage.clear();
+      window.location.href = 'index.html';
     })["catch"](function (err) {
-      console.log(err.response.data.message);
-      Swal.fire({
-        title: err.response.data.message,
-        text: err.response.data.error,
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      });
+      console.log(err);
     });
-    loginEmail.value = "";
-    loginPassword.value = "";
   };
+}
+"use strict";
 
-  goLogin();
-});
+// 定義需渲染的三個頁面
+var orderHistoryHTML = document.querySelector('#order-history');
+var accountHTML = document.querySelector('#account');
+var changePwdHTML = document.querySelector('#change-password'); // 定義會員暱稱需渲染的元素位置
+
+var userName = document.querySelector('#user-name'); // 定義帳號資料需渲染的位置
+
+var disabledAccount = document.querySelector('#disabled-account');
+var disabledLINE = document.querySelector('#disabled-LINE-user'); // 確定為要渲染的頁面，而非其他的
+
+if (orderHistoryHTML || accountHTML || changePwdHTML) {
+  var memberToken = localStorage.getItem('token');
+  var user = localStorage.getItem('user');
+
+  if (memberToken !== null) {
+    // 判斷是否已登入會員
+    console.log(memberToken);
+    userName.textContent = "".concat(user, "\uFF0C\u60A8\u597D");
+    disabledAccount.value = localStorage.getItem('account');
+    disabledLINE.value = localStorage.getItem('user');
+  } else {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: '請登入會員',
+      showConfirmButton: true
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        window.location.href = 'login.html';
+      } // 按下確定之後進行畫面跳轉
+
+    });
+  }
+}
 "use strict";
 
 var urlAPI = 'https://todoo.5xcamp.us';
@@ -285,40 +366,45 @@ var signUpNickname = document.querySelector('#nickname');
 var signUpPassword = document.querySelector('#sign-up-password');
 var signUpButton = document.querySelector('#sign-up-submit');
 var obj = {};
-signUpButton.addEventListener('click', function () {
-  var goSignUp = function goSignUp() {
-    var email = signUpEmail.value;
-    var nickname = signUpNickname.value;
-    var pwd = signUpPassword.value;
-    obj = {
-      "user": {
-        "email": email,
-        "nickname": nickname,
-        "password": pwd
-      }
-    };
-    axios.post("".concat(urlAPI, "/users"), obj).then(function (res) {
-      console.log(res);
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: res.data.message,
-        showConfirmButton: true
-      });
-    })["catch"](function (err) {
-      console.log(err);
-      Swal.fire({
-        title: err.response.data.message,
-        text: err.response.data.error,
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      });
-    });
-    signUpEmail.value = "";
-    signUpNickname.value = "";
-    signUpPassword.value = "";
-  };
 
-  goSignUp();
-});
+if (signUpButton) {
+  signUpButton.addEventListener('click', function () {
+    var goSignUp = function goSignUp() {
+      var email = signUpEmail.value;
+      var nickname = signUpNickname.value;
+      var pwd = signUpPassword.value;
+      obj = {
+        "user": {
+          "email": email,
+          "nickname": nickname,
+          "password": pwd
+        }
+      };
+      axios.post("".concat(urlAPI, "/users"), obj).then(function (res) {
+        console.log(res);
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: res.data.message,
+          showConfirmButton: true
+        });
+      })["catch"](function (err) {
+        console.log(err);
+        Swal.fire({
+          title: err.response.data.message,
+          text: err.response.data.error,
+          icon: 'error',
+          confirmButtonText: 'Cool'
+        });
+      });
+      signUpEmail.value = "";
+      signUpNickname.value = "";
+      signUpPassword.value = "";
+    };
+
+    goSignUp();
+  });
+}
+
+;
 //# sourceMappingURL=all.js.map
