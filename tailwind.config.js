@@ -48,6 +48,7 @@ module.exports = {
         'tighter': '1.2',
       },
       colors: {
+        'warm-gray-50': '#F9F8F4',
         'true-gray-400': '#959493',
         'true-gray-500': '#737272',
         'true-gray-700': '#404040',
