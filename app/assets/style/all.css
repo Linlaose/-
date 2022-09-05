@@ -169,6 +169,33 @@
   .menu-hover-img-scale:hover > div > div > img.card-img{
     transform: scale(1.05);
   }
+
+  .menu-meal-set img{
+    width: 100%;
+    height: 226px;
+    object-fit: cover;
+  }
+
+  .menu-vegetables img{
+    width: 100%;
+    height: 226px;
+    object-fit: cover;
+  }
+  .menu-lu-wei img{
+    width: 100%;
+    height: 226px;
+    object-fit: cover;
+  }
+  .menu-nonstaple-food img{
+    width: 100%;
+    height: 226px;
+    object-fit: cover;
+  }
+  .menu-light-meal img{
+    width: 100%;
+    height: 226px;
+    object-fit: cover;
+  }
 }
 
 /* 動畫 */
