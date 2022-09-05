@@ -2,7 +2,7 @@
 title: 金艾甲鹽水雞 | 菜單
 layout: ./app/layout.ejs
 engine: ejs
-current: menu
+current: menu-light-meal
 ---
 
 <main>
@@ -16,7 +16,7 @@ current: menu
             <a
               id="nav-menu-global"
               class="relative text-h3-fz md:text-h2-fz mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
-              href="#"
+              href="./menu.html"
               >全部</a
             >
           </h2>
@@ -28,7 +28,7 @@ current: menu
             <a
               id="nav-menu-meal-set"
               class="relative text-h3-fz md:text-h2-fz mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
-              href="#"
+              href="./menu-meal-set.html"
               >套餐</a
             >
           </h2>
@@ -40,7 +40,7 @@ current: menu
             <a
               id="nav-menu-vegetables"
               class="relative text-h3-fz md:text-h2-fz mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
-              href="#"
+              href="./menu-vegetables.html"
               >蔬菜</a
             >
           </h2>
@@ -52,7 +52,7 @@ current: menu
             <a
               id="nav-menu-lu-wei"
               class="relative text-h3-fz md:text-h2-fz mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
-              href="#"
+              href="./menu-lu-wei.html"
               >滷味</a
             >
           </h2>
@@ -64,7 +64,7 @@ current: menu
             <a
               id="nav-menu-nonstaple-food"
               class="relative text-h3-fz md:text-h2-fz mx-4 my-1 font-bold text-red-900 after:transition-width after:duration-500 hover:after:w-32 after:content-[''] after:h-0.5 after:w-0 after:block after:bg-true-gray-400 after:absolute after:bottom-0.5 after:-translate-x-1/2 after:left-1/2"
-              href="#"
+              href="./menu-nonstaple-food.html"
               >副食</a
             >
           </h2>
@@ -87,624 +87,6 @@ current: menu
     <!-- nav end -->
     <ul class="mx-6 my-8 transition-all lg:mx-0 " data-type="menu-global">
       <!-- menu -->
-      <li id="menu-meal-set">
-        <!-- 套餐 -->
-        <ul class="lg:grid lg:grid-cols-11 lg:gap-x-3 lg:gap-y-6">
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-meal-set lg:mt-0">
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/favorite-meal-set-personal.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">套餐 - 個人</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">1 樣肉 +3 樣菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 100</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-meal-set lg:mt-0">
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/favorite-meal-set-2.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">套餐 - 1 號餐</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">半隻雞 +3 樣菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 150</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-meal-set lg:mt-0">
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/favorite-meal-set.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">套餐 - 2 號餐</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">半隻雞 +6 樣菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 200</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <!-- 套餐 end -->
-      <li id="menu-vegetables " class="lg:mt-6">
-        <!-- 蔬菜 -->
-        <ul class="lg:grid lg:grid-cols-11 lg:gap-x-3 lg:gap-y-6">
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 四季豆 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-四季豆.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">四季豆</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 四季豆 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 娃娃菜 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-娃娃菜.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">娃娃菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 娃娃菜 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 小黃瓜 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/vegetables-小黃瓜.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">小黃瓜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 小黃瓜 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 杏鮑菇 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-杏鮑菇.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">杏鮑菇</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 杏鮑菇 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 水蓮 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-水蓮.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">水蓮</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 水蓮 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 洋蔥 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/vegetables-洋蔥.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">洋蔥</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 洋蔥 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 玉米筍 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-玉米筍.jpeg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">玉米筍</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 玉米筍 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 甜椒 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-甜椒.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">甜椒</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 甜椒 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 白蘿蔔 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/vegetables-白蘿蔔.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">白蘿蔔</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 白蘿蔔 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 秋葵 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-秋葵.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">秋葵</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 秋葵 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 筍片 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-筍片.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">筍片</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 筍片 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 花椰菜 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/vegetables-花椰菜.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">花椰菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 花椰菜 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 高麗菜 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-高麗菜.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">高麗菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 高麗菜 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 黑木耳 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/vegetables-黑木耳.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">黑木耳</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 黑木耳 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-vegetables lg:mt-0">
-            <!-- 龍鬚菜 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/vegetables-龍鬚菜.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">蔬菜</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">龍鬚菜</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 20</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 龍鬚菜 end -->
-        </ul>
-      </li>
-      <!-- 蔬菜 end -->
-      <li id="menu-lu-wei " class="lg:mt-6">
-        <!-- 滷味 -->
-        <ul class="lg:grid lg:grid-cols-11 lg:gap-x-3 lg:gap-y-6">
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- 甜不辣片 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/braised-dish-甜不辣片.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">甜不辣片</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 甜不辣片 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- 百頁豆腐 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/braised-dish-百頁豆腐.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">百頁豆腐</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 百頁豆腐 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- 素腰花 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/braised-dish-素腰花.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">素腰花</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 素腰花 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- -豆干 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/braised-dish-豆干.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">-豆干</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- -豆干 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- 豆皮 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/braised-dish-豆皮.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">豆皮</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 豆皮 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-lu-wei lg:mt-0">
-            <!-- 鴨血糕 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/braised-dish-鴨血糕.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">滷味</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">鴨血糕</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 鴨血糕 end -->
-        </ul>
-      </li>
-      <!-- 滷味 end -->
-      <li id="menu-nonstaple-food " class="lg:mt-6">
-        <!-- 副食 -->
-        <ul class="lg:grid lg:grid-cols-11 lg:gap-x-3 lg:gap-y-6">
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 豬耳朵 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/nonstaple-food-豬耳朵.jpeg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">豬耳朵</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 豬耳朵 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 雞冠 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/nonstaple-food-雞冠.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">雞冠</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 雞冠 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 雞心 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/nonstaple-food-雞心.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">雞心</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 雞心 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-2 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 雞胗 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/nonstaple-food-雞胗.jpeg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">雞胗</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 雞胗 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-5 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 鴨脖子 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 card-img rounded-t-xl" src="./assets/images/nonstaple-food-鴨脖子.jpg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">鴨脖子</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 鴨脖子 end -->
-          <li class="mt-4 lg:col-span-3 lg:col-start-8 menu-hover-img-scale menu-nonstaple-food lg:mt-0">
-            <!-- 黃金蛋 -->
-            <div class="shadow-xl card rounded-t-xl bg-warm-gray-50 ">
-              <div class="overflow-hidden rounded-t-xl">
-                <img class="transition-all duration-500 h-67.5 w-full object-cover card-img rounded-t-xl" src="./assets/images/nonstaple-food-黃金蛋.jpeg"></img>
-              </div>
-              <div class="p-2 card-header">
-                <p class="text-true-gray-400">副食</p>
-              </div>
-              <div class="p-2 text-center card-body"><h4 class="">黃金蛋</h4></div>
-              <div class="p-2 text-right card-price"><strong class="text-4xl">$ 25</strong></div>
-              <button id="order" type="button" class="w-full bg-red-900">
-                <a href="#" class="block px-8 py-2 text-white transition-colors duration-300 hover:bg-orange-100 hover:text-true-gray-800 hover:shadow-lg">
-                  <i class="fa-solid fa-utensils"></i>
-                  加入點餐單
-                </a>
-              </button>
-            </div>
-          </li>
-          <!-- 黃金蛋 end -->
-        </ul>
-      </li>
-      <!-- 副食 end -->
       <li id="menu-light-meal " class="lg:mt-6">
         <!-- 輕食 -->
         <ul class="lg:grid lg:grid-cols-11 lg:gap-x-3 lg:gap-y-6">
@@ -979,22 +361,22 @@ current: menu
     <div class="aside-nav">
       <ul class="px-2 py-4">
         <li class="aside-nav-global">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">全部</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu.html">全部</a>
         </li>
         <li class="aside-nav-meal-set">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">套餐</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu-meal-set.html">套餐</a>
         </li>
         <li class="aside-nav-vegetables">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">蔬菜</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu-vegetables.html">蔬菜</a>
         </li>
         <li class="aside-nav-lu-wei">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">滷味</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu-lu-wei.html">滷味</a>
         </li>
         <li class="aside-nav-nonstaple-food">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">副食</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu-nonstaple-food.html">副食</a>
         </li>
         <li class="aside-nav-light-meal">
-          <a class="py-1 transition-colors hover:text-true-gray-400" href="#">輕食</a>
+          <a class="py-1 transition-colors hover:text-true-gray-400" href="./menu-light-meal.html">輕食</a>
         </li>
       </ul>
     </div>
