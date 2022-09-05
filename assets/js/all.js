@@ -197,8 +197,8 @@ var moveLeftNear = function moveLeftNear() {
 
 
 var moveRightFar = function moveRightFar() {
-  var navOrder = document.querySelector('#nav-order');
-  navOrder.classList.add('animation-move-right-far');
+  var navMember = document.querySelector('#nav-member');
+  navMember.classList.add('animation-move-right-far');
 }; // 關於我們
 // const moveRightNear = () => {
 //   const navAboutUs = document.querySelector('#nav-about-us');
@@ -365,7 +365,9 @@ var changePwdHTML = document.querySelector('#change-password'); // 定義會員�
 var userName = document.querySelector('#user-name'); // 定義帳號資料需渲染的位置
 
 var disabledAccount = document.querySelector('#disabled-account');
-var disabledLINE = document.querySelector('#disabled-LINE-user'); // 確定為要渲染的頁面，而非其他的
+var disabledLINE = document.querySelector('#disabled-LINE-user'); // 定義登入頁面
+
+var loginHTML = document.querySelector('#login-page'); // 確定為要渲染的頁面，而非其他的
 
 if (orderHistoryHTML || accountHTML || changePwdHTML) {
   var memberToken = localStorage.getItem('token');
@@ -397,6 +399,18 @@ if (orderHistoryHTML || accountHTML || changePwdHTML) {
     });
   }
 }
+
+; // 判斷是否已登入並做頁面引導
+
+if (loginHTML) {
+  var _memberToken = localStorage.getItem('token');
+
+  if (_memberToken !== null) {
+    window.location.href = 'order-history.html';
+  }
+}
+
+;
 "use strict";
 
 var urlAPI = 'https://todoo.5xcamp.us';
