@@ -207,8 +207,8 @@ const moveLeftNear = () => {
 //   navOrder.classList.add('animation-delay-2000', 'animate-moveRightFar')
 // }
 const moveRightFar = () => {
-  const navOrder = document.querySelector('#nav-order');
-  navOrder.classList.add('animation-move-right-far')
+  const navMember = document.querySelector('#nav-member');
+  navMember.classList.add('animation-move-right-far')
 }
 // 關於我們
 // const moveRightNear = () => {
@@ -257,7 +257,6 @@ $(window).scroll(showBtnCondition);
 
 // 取得地區時間，更改營業顯示
 const indexPage = document.querySelector('#index-page');
-
 if (indexPage) {//判斷是否為首頁
   const serviceHours = () => {
     const openIcon = document.querySelector('#open-icon');

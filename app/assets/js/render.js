@@ -10,6 +10,9 @@ const userName = document.querySelector('#user-name');
 const disabledAccount = document.querySelector('#disabled-account');
 const disabledLINE = document.querySelector('#disabled-LINE-user');
 
+// 定義登入頁面
+const loginHTML = document.querySelector('#login-page');
+
 
 // 確定為要渲染的頁面，而非其他的
 if (orderHistoryHTML || accountHTML || changePwdHTML) {
@@ -38,4 +41,12 @@ if (orderHistoryHTML || accountHTML || changePwdHTML) {
       }// 按下確定之後進行畫面跳轉
     })
   }
-}
+};
+
+// 判斷是否已登入並做頁面引導
+if (loginHTML) {
+  const memberToken = localStorage.getItem('token');
+  if (memberToken !== null) {
+    window.location.href = 'order-history.html';
+  }
+};
