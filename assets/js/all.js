@@ -234,6 +234,7 @@ window.addEventListener('load', function () {
   banner();
 }); // 所有讀取完成後須立即執行的動畫
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
+// 滾動至一定高度後，顯示內容
 
 function showBtnCondition() {
   if ($(this).scrollTop() > 1000) {
@@ -243,7 +244,32 @@ function showBtnCondition() {
   }
 }
 
-$(window).scroll(showBtnCondition);
+$(window).scroll(showBtnCondition); // 取得地區時間，更改營業顯示
+
+var indexPage = document.querySelector('#index-page');
+
+if (indexPage) {
+  //判斷是否為首頁
+  var serviceHours = function serviceHours() {
+    var openIcon = document.querySelector('#open-icon');
+    var openText = document.querySelector('#open-text');
+    var closedIcon = document.querySelector('#closed-icon');
+    var closedText = document.querySelector('#closed-text');
+    var times = new Date().getHours();
+
+    if (times >= 12 && times <= 24) {
+      console.log('open');
+      closedIcon.classList.add('hidden');
+      closedText.classList.add('hidden');
+    } else {
+      console.log('closed');
+      openIcon.classList.add('hidden');
+      openText.classList.add('hidden');
+    }
+  };
+
+  serviceHours();
+}
 "use strict";
 
 var loginEmail = document.querySelector('#login-email');
