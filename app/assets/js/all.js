@@ -245,6 +245,7 @@ window.addEventListener('load', () => {
 
 //!為何一定要是頁面曾經讀取過的動畫，才有辦法在 js 動態加入後產生一樣的效果 (可能是 tailwind 讀取問題，因為純寫 CSS 可以動；如上)
 
+// 滾動至一定高度後，顯示內容
 function showBtnCondition() {
   if ($(this).scrollTop() > 1000) {
     $('#member-order-nav').fadeIn();
@@ -253,3 +254,26 @@ function showBtnCondition() {
   }
 }
 $(window).scroll(showBtnCondition);
+
+// 取得地區時間，更改營業顯示
+const indexPage = document.querySelector('#index-page');
+
+if (indexPage) {//判斷是否為首頁
+  const serviceHours = () => {
+    const openIcon = document.querySelector('#open-icon');
+    const openText = document.querySelector('#open-text');
+    const closedIcon = document.querySelector('#closed-icon');
+    const closedText = document.querySelector('#closed-text');
+    const times = new Date().getHours();
+    if (times >= 12 && times <= 24) {
+      console.log('open');
+      closedIcon.classList.add('hidden')
+      closedText.classList.add('hidden')
+    } else {
+      console.log('closed');
+      openIcon.classList.add('hidden')
+      openText.classList.add('hidden')
+    }
+  }
+  serviceHours();
+}

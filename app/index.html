@@ -25,13 +25,21 @@ current: index
   </div>
 </div>
 <!-- banner end -->
-<main class="container px-6 mx-auto">
-  <div id="service-hours" class="flex items-center justify-end mt-2">
+<main id="index-page" class="container px-6 mx-auto">
+  <div
+    id="service-hours"
+    class="flex items-center justify-end mt-2 animate-pulse"
+  >
     <!-- service-hours -->
-    <i class="text-2xl text-red-900 fa-solid fa-door-open"></i>
-    <p class="pl-2 text-red-900">營業中</p>
+    <i id="open-icon" class="text-2xl text-red-900 fa-solid fa-door-open"></i>
+    <p id="open-text" class="pl-2 text-red-900">營業中</p>
+    <i
+      id="closed-icon"
+      class="text-2xl text-red-900 fa-solid fa-door-closed"
+    ></i>
+    <p id="closed-text" class="pl-2 text-red-900">非營業時間</p>
   </div>
-  <!-- service-hours end (要以 js 捕捉時間自動更改) -->
+  <!-- service-hours end -->
   <section class="container mt-14">
     <!-- secret -->
     <div class="grid gap-6 lg:grid-cols-12 lg:items-center">
