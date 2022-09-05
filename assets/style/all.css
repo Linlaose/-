@@ -1052,6 +1052,9 @@ select {
 .h-5 {
   height: 1.25rem;
 }
+.h-67\.5 {
+  height: 16.875rem;
+}
 .h-7 {
   height: 1.75rem;
 }
@@ -1914,6 +1917,11 @@ select {
     }
   }
 /* 登入、註冊遮罩動畫 */
+.menu-hover-img-scale:hover > div > div > img.card-img{
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 
 /* 動畫 */
 /* keyframes */
@@ -2167,12 +2175,6 @@ select {
 } .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
-} .hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      -ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 } .hover\:border-true-gray-400:hover {
   --tw-border-opacity: 1;
   border-color: rgb(149 148 147 / var(--tw-border-opacity));
@@ -2520,10 +2522,6 @@ select {
 
   .lg\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .lg\:mt-0 {
-    margin-top: 0px;
   }
 
   .lg\:block {
