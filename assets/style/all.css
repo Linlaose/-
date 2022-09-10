@@ -812,14 +812,11 @@ select {
   top: 0px;
   bottom: 0px;
 }
-.top-18\/25 {
-  top: 72%;
+.top-1\/2 {
+  top: 50%;
 }
 .right-2 {
   right: 0.5rem;
-}
-.top-1\/2 {
-  top: 50%;
 }
 .left-1\/2 {
   left: 50%;
