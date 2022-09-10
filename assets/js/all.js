@@ -269,7 +269,23 @@ if (indexPage) {
   };
 
   serviceHours();
+} // menu 手機側邊欄導覽列
+
+
+var menuAside = document.querySelector('#menu-aside');
+var asideBtn = document.querySelector('#aside-btn');
+var menuAsideOpen = document.querySelector('#menu-aside-open');
+var menuAsideClose = document.querySelector('#menu-aside-close');
+
+if (menuAside) {
+  asideBtn.addEventListener('click', function () {
+    menuAside.classList.toggle('-translate-x-16');
+    menuAsideOpen.classList.toggle('hidden');
+    menuAsideClose.classList.toggle('hidden');
+  });
 }
+
+;
 "use strict";
 
 var orderBtn = document.querySelectorAll('#order');
