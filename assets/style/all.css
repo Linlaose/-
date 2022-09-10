@@ -970,9 +970,6 @@ select {
 .mb-16 {
   margin-bottom: 4rem;
 }
-.ml-5 {
-  margin-left: 1.25rem;
-}
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -2428,10 +2425,6 @@ select {
             transition-duration: 700ms;
   }
 } @media (min-width: 768px) {
-
-  .md\:m-0 {
-    margin: 0px;
-  }
 
   .md\:block {
     display: block;
