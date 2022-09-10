@@ -2,11 +2,11 @@ const logo = document.querySelector('.logo');
 const hamburger = document.querySelector('.hamburger');
 const toggleMenu = document.querySelector('.menu-list');
 
-// if (logo) {
-//   hamburger.addEventListener('click', (e) => { /* 點到 checkbox */
-//     toggleMenu.classList.toggle('menu-show');
-//   })
-// };
+if (logo) {
+  hamburger.addEventListener('click', (e) => { /* 點到 checkbox */
+    toggleMenu.classList.toggle('menu-show');
+  })
+};
 
 // foods-swiper
 const swiper = new Swiper('.foods-swiper', {
