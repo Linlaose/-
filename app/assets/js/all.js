@@ -276,3 +276,17 @@ if (indexPage) {//判斷是否為首頁
   }
   serviceHours();
 }
+
+// menu 手機側邊欄導覽列
+const menuAside = document.querySelector('#menu-aside');
+const asideBtn = document.querySelector('#aside-btn');
+const menuAsideOpen = document.querySelector('#menu-aside-open');
+const menuAsideClose = document.querySelector('#menu-aside-close');
+
+if (menuAside) {
+  asideBtn.addEventListener('click', () => {
+    menuAside.classList.toggle('-translate-x-16');
+    menuAsideOpen.classList.toggle('hidden');
+    menuAsideClose.classList.toggle('hidden');
+  })
+};
