@@ -289,38 +289,84 @@ if (menuAside) {
 "use strict";
 
 var orderBtn = document.querySelectorAll('#order');
+var menuUrl = 'https://cryptic-sea-97657.herokuapp.com';
 var orderImg = []; // 菜品圖片陣列
 
 var orderClass = [];
 var orderFood = [];
 var orderPrice = [];
+var count = 0;
 orderBtn.forEach(function (item) {
   item.addEventListener('click', function (e) {
+    count++;
     e.preventDefault(); // 不要讓 a 標籤的 href 作動
     // console.log(e.target);// 選定目前按鈕的元素
     // 抓菜品圖片位址
 
-    console.log(e.target.parentNode.closest("div").firstChild.nextElementSibling.firstChild.nextElementSibling.getAttribute('src')); // 菜品圖片陣列新增位址
+    var vegetableUrl = e.target.parentNode.closest("div").firstChild.nextElementSibling.firstChild.nextElementSibling.getAttribute('src');
+    console.log(vegetableUrl); // 菜品圖片陣列新增位址
+    // orderImg.push(vegetableUrl);
+    // 將菜品圖片陣列寫入 localStorage
+    // localStorage.setItem('orderImg', JSON.stringify(orderImg));
+    // 抓菜品類別
 
-    orderImg.push(e.target.parentNode.closest("div").firstChild.nextElementSibling.firstChild.nextElementSibling.getAttribute('src')); // 將菜品圖片陣列寫入 localStorage
+    var menuClass = e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextElementSibling.textContent;
+    console.log(menuClass); // console.log(e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextElementSibling.textContent);
+    // orderClass.push(e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextElementSibling.textContent);
+    // localStorage.setItem('orderClass', JSON.stringify(orderClass));
+    // 抓菜品名稱
 
-    localStorage.setItem('orderImg', JSON.stringify(orderImg)); // 抓菜品類別
+    var mealName = e.target.parentNode.previousElementSibling.previousElementSibling.firstChild.textContent;
+    console.log(mealName); // console.log(e.target.parentNode.previousElementSibling.previousElementSibling.firstChild.textContent);
+    // orderFood.push(e.target.parentNode.previousElementSibling.previousElementSibling.firstChild.textContent);
+    // localStorage.setItem('orderFood', JSON.stringify(orderFood))
+    // 抓價格
 
-    console.log(e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextElementSibling.textContent);
-    orderClass.push(e.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.firstChild.nextElementSibling.textContent);
-    localStorage.setItem('orderClass', JSON.stringify(orderClass)); // 抓菜品名稱
+    var price = e.target.parentNode.previousElementSibling.firstChild.textContent;
+    console.log(price); // console.log(e.target.parentNode.previousElementSibling.firstChild.textContent);
+    // orderPrice.push(e.target.parentNode.previousElementSibling.firstChild.textContent);
+    // localStorage.setItem('orderPrice', JSON.stringify(orderPrice))
+    // 選定目前按鈕元素 => 此元素的父層元素 => 父層元素同階級但上一個順位的元素 => 上一順位元素的子元素 => 子元素的文字內容
+    // console.log(orderImg);
+    // addCart(count, vegetableUrl, menuClass, mealName, price);
 
-    console.log(e.target.parentNode.previousElementSibling.previousElementSibling.firstChild.textContent);
-    orderFood.push(e.target.parentNode.previousElementSibling.previousElementSibling.firstChild.textContent);
-    localStorage.setItem('orderFood', JSON.stringify(orderFood)); // 抓價格
-
-    console.log(e.target.parentNode.previousElementSibling.firstChild.textContent);
-    orderPrice.push(e.target.parentNode.previousElementSibling.firstChild.textContent);
-    localStorage.setItem('orderPrice', JSON.stringify(orderPrice)); // 選定目前按鈕元素 => 此元素的父層元素 => 父層元素同階級但上一個順位的元素 => 上一順位元素的子元素 => 子元素的文字內容
-
-    console.log(orderImg);
+    console.log(count);
   });
 });
+
+var findMenu = function findMenu() {
+  axios.get("".concat(menuUrl, "/menu")).then(function (res) {
+    var menuArr = res.data;
+    menuArr.forEach(function (item) {
+      console.log(item.name);
+    });
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+
+var findCart = function findCart() {
+  axios.get("".concat(menuUrl, "/cart")).then(function (res) {
+    console.log(res);
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+
+var addCart = function addCart(count, vegetableUrl, menuClass, mealName, price) {
+  obj = {
+    "id": count,
+    "imgUrl": vegetableUrl,
+    "class": menuClass,
+    "name": mealName,
+    "price": price
+  };
+  axios.post("".concat(menuUrl, "/cart"), obj).then(function (res) {
+    console.log(res);
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
 "use strict";
 
 var loginEmail = document.querySelector('#login-email');
