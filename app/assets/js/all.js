@@ -229,7 +229,7 @@ const moveRightNear = () => {
 const banner = () => {
   const bannerImage = document.querySelector('#banner-img');
   if (bannerImage) {
-    bannerImage.classList.add('animation-scale');
+    bannerImage.classList.add('animate-goBig');
   }
 }
 
